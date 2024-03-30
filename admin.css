@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+.sidebar {
+    height: 100vh;
+    max-width: 30vh;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li a {
+    color: #fff;
+}
+
+i{
+    margin-right: 12px;
+}
+
+.content {
+    padding: 20px;
+}
