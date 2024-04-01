@@ -1,3 +1,4 @@
+var db = 
 {
   "roles": [
     {
@@ -95,7 +96,7 @@
     },
     {
       "id": 3,
-      "productName": "",
+      "productName": "None",
       "image": "url",
       "price": 0,
       "typeID": 1,
