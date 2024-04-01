@@ -1,0 +1,9 @@
+GET http://localhost:3000/accounts?roleID=2
+###
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Guest"
+}
