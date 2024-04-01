@@ -7,7 +7,7 @@ var clothesData = [
     { id: 5, name: 'Quần short', category: 'Quần', soluong: 10},
     { id: 6, name: 'Áo khoác', category: 'Áo', soluong: 10},
     { id: 7, name: 'Áo thun', category: 'Áo', soluong: 10},
-    { id: 8, name: 'Quần âu', category: 'Quần', soluong: 10},
+    { id: 8, name: 'Quần âu', category: 'Quần', soluong: 10}, 
 ];
 
 // Kiểm tra xem Local Storage có hỗ trợ không
