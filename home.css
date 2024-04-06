@@ -132,3 +132,40 @@ body {
     background-color: #ffffff;
     box-shadow: 0 4px 4px -3px #c2c2c2;
 }
+
+.catalog-title {
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 64px 0 32px;
+    font-weight: 500;
+}
+
+.product-image {
+    >img {
+        border: 1px solid #f0f0f0;
+        width: 100%;
+    }
+}
+
+.product-name {
+    padding: 20px 0 4px;
+    font-size: 16px;
+}
+
+.product-price {
+    display: flex;
+    gap: 12px;
+    justify-content: baseline;
+    font-size: 14px;
+
+    .discounted {
+        color: red;
+        font-weight: 700;
+    }
+
+    .non-discounted {
+        text-decoration: line-through;
+        color: #b5b5b5;
+    }
+}
