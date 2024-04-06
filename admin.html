@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -37,10 +38,136 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div id="home" class="content">Nội dung của Trang chủ</div>
+                <div id="home" class="content">
+                    <div class="d-flex">
+                        <div class="container">
+                            <!-- begin statistic -->
+                            <div class="row" id="statistic">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card l-bg-cherry">
+                                        <div class="card-statistic-3 p-4">
+                                            <div class="mb-4">
+                                                <h5 class="card-title mb-0">Số lượng khách hàng</h5>
+                                            </div>
+                                            <div class="row align-items-center mb-2 d-flex">
+                                                <div class="col-8">
+                                                    <h2 class="d-flex align-items-center mb-0">22</h2> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card l-bg-blue-dark">
+                                        <div class="card-statistic-3 p-4">
+                                            <div class="mb-4">
+                                                <h5 class="card-title mb-0">Số lượng sản phẩm</h5>
+                                            </div>
+                                            <div class="row align-items-center mb-2 d-flex">
+                                                <div class="col-8">
+                                                    <h2
+                                                        class="d-flex align-items-center mb-0">
+                                                        22
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card l-bg-green-dark">
+                                        <div class="card-statistic-3 p-4">
+                                            <div class="mb-4">
+                                                <h5 class="card-title mb-0">
+                                                    Đã bán
+                                                </h5>
+                                            </div>
+                                            <div class="row align-items-center mb-2 d-flex">
+                                                <div class="col-8">
+                                                    <h2
+                                                        class="d-flex align-items-center mb-0">
+                                                        22
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="card l-bg-orange-dark">
+                                        <div class="card-statistic-3 p-4">
+                                            <div class="mb-4">
+                                                <h5 class="card-title mb-0">
+                                                    Doanh thu
+                                                </h5>
+                                            </div>
+                                            <div class="row align-items-center mb-2 d-flex">
+                                                <div class="col-8">
+                                                    <h2
+                                                        class="d-flex align-items-center mb-0">
+                                                        22000
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end statistic -->
+            
+                            <!-- begin tables -->
+                            <div class="row" id="dashboard-table">
+                                <div class="table-responsive col-md-6"> 
+                                    <h4>Lịch sử nhập hàng</h4>
+                                    <table class="table table-dark table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">STT</th>
+                                                <th scope="col">Tên hàng</th>
+                                                <th scope="col">Số lượng</th>
+                                                <th scope="col">Thời gian</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-responsive col-md-6">
+                                    <h4>Nhật ký bán hàng</h4>
+                                    <table class="table table-dark table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">STT</th>
+                                                <th scope="col">Khách hàng</th>
+                                                <th scope="col">Sản phẩm</th>
+                                                <th scope="col">Số lượng</th>
+                                                <th scope="col">Thời gian</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody v-if="normalizedOverExpired.length != 0">
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="products" class="content" style="display:none;">
                     <h1>Nội dung của trang sản phẩm</h1>
-                        <!-- <table class="table table-dark table-bordered">
+                        <table class="table table-dark table-bordered">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -50,13 +177,11 @@
                                 </tr>
                             </thead>
                             <tbody id="product-tbody">
-
                             </tbody>
-                        </table>                    -->
+                        </table>                   
                  </div>
                 <div id="orders" class="content" style="display:none;">Nội dung của trang Quản lý đơn hàng</div>
                 <div id="customers" class="content" style="display:none;">Nội dung của trang Khách hàng</div>
-                
             </div>
         </div>
     </div>

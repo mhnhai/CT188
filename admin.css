@@ -8,7 +8,6 @@ body {
 
 .sidebar {
     height: 100vh;
-    max-width: 30vh;
 }
 
 .sidebar h2 {
@@ -35,5 +34,22 @@ i{
 }
 
 .content {
+    width: 100%;
     padding: 20px;
+}
+/* Card style */
+.abc {
+    transform: translateY(-10vh);
+}
+.card {
+    background-color: #212529;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+        0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+        0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+        0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
 }
