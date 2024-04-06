@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="../JavaScripts/admin.js">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
         <div class="row">
-            <div class="col-md-3">
-                <div class="sidebar text-bg-dark">
-                    <h2 class="text-center">Menu</h2> 
+            <div class="col-md-2">
+                <div class="sidebar text-bg-dark vh-100">
+                    <h2 class="text-center p-3">Menu</h2> 
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" onclick="showContent('home')"><i class="bi-house"></i>Trang chủ</a>
+                            <a class="nav-link active" data-bs-toggle="pill" onclick="showContent('home')"><i class="bi-house"></i>Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('products')"><i class="bi-microsoft"></i>Sản phẩm</a>
+                            <a class="nav-link" data-bs-toggle="pill" onclick="showContent('products')"><i class="bi-microsoft"></i>Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('orders')"><i class="bi-bag-check"></i>Quản lý đơn hàng</a>
+                            <a class="nav-link" data-bs-toggle="pill" onclick="showContent('orders')"><i class="bi-bag-check"></i>Quản lý đơn hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('customers')"><i class="bi-people"></i>Khách hàng</a>
+                            <a class="nav-link" data-bs-toggle="pill" onclick="showContent('customers')"><i class="bi-people"></i>Khách hàng</a>
                         </li>
                         <hr>
                         <li class="nav-item">

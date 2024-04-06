@@ -21,20 +21,6 @@ if (typeof(Storage) !== "undefined") {
     }
 }
 
-//Tạo active cho sidebar
-// Lấy tất cả các tab
-let tabs = document.querySelectorAll('.nav-link');
-
-// Lặp qua từng tab và thêm sự kiện click
-tabs.forEach(tab => {
-  tab.addEventListener('click', function() {
-    // Xóa lớp active khỏi tất cả các tab
-    tabs.forEach(t => t.classList.remove('active'));
-    // Thêm lớp active cho tab được click
-    this.classList.add('active');
-  });
-});
-
 function showContent(contentId) {
     var contents = document.getElementsByClassName('content');
     for (var i = 0; i < contents.length; i++) {

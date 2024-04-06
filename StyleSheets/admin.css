@@ -2,26 +2,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container-fluid{
-    padding: 0px;
-}
-
-.sidebar {
-    height: 100vh;
-}
-
-.sidebar h2 {
-    margin-bottom: 20px;
-}
-
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 .sidebar ul li {
-    margin-bottom: 10px;
     cursor: pointer;
 }
 
