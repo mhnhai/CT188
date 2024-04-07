@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 body {
-    font-family: 'Quicksand', 'san-serif';
+    font-family: "Quicksand", "san-serif";
 }
 
 .vertical-separation-symbol {
@@ -18,7 +18,7 @@ body {
     background: #ffffff;
 }
 
-.btn-search>svg {
+.btn-search > svg {
     width: 18px;
     height: 18px;
 }
@@ -75,7 +75,7 @@ body {
     justify-content: center;
 }
 
-.navigation-menu>span {
+.navigation-menu > span {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
@@ -97,7 +97,7 @@ body {
     height: 100%;
     align-items: center;
 
-    >svg {
+    > svg {
         /*.btn-login > svg*/
         width: 20px;
         height: 20px;
@@ -113,7 +113,7 @@ body {
     align-items: center;
     position: relative;
 
-    >svg {
+    > svg {
         width: 20px;
         height: 20px;
         stroke-width: 1.5px;
@@ -142,7 +142,7 @@ body {
 }
 
 .product-image {
-    >img {
+    > img {
         border: 1px solid #f0f0f0;
         width: 100%;
     }
@@ -168,4 +168,46 @@ body {
         text-decoration: line-through;
         color: #b5b5b5;
     }
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #c2c2c2;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+.container_link > .link a {
+    color: #c2c2c2;
+}
+
+.title_Fanpage,
+.title_Info_business,
+.title_link,
+.title_contact {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Info_business img {
+    max-width: 170px;
+}
+
+.contact > .address, .contact > .phone, .contact > .mail{
+    display: flex;
+    gap: 5px;
+}
+
+.contact svg{
+    height: 20px;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
 }
