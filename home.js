@@ -119,7 +119,7 @@ naInstance.addEventListener('mouseout', function () {
 });
 
 naInstance.addEventListener('scrollend', function () {
-    naCurrentScroll = Math.round(naInstance.scrollLeft / 330) * naItemWidth;
+    naCurrentScroll = Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
 });
 // end of new arrival
 
@@ -161,6 +161,6 @@ bsInstance.addEventListener('mouseout', function () {
 });
 
 bsInstance.addEventListener('scrollend', function () {
-    bsCurrentScroll = Math.round(bsInstance.scrollLeft / 330) * bsItemWidth;
+    bsCurrentScroll = Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
 });
 // end of best seller
