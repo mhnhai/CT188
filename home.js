@@ -94,7 +94,7 @@ var naItemWidth = naItemInstance.clientWidth;
 var naMaxScroll = (naCount - naShowingCount) * naItemWidth;
 var naCurrentScroll = 0;
 
-var scrollIntervalFunction = function () {
+var naScrollIntervalFunction = function () {
     if(naCurrentScroll + naItemWidth <= naMaxScroll)
     {
         naCurrentScroll += naItemWidth;
@@ -108,14 +108,14 @@ var scrollIntervalFunction = function () {
     });
 };
 
-var naScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+var naScrollIntervalId = window.setInterval(naScrollIntervalFunction, autoPlayingDuration);
 
 naInstance.addEventListener('mouseover', function () {
     window.clearInterval(naScrollIntervalId);
 });
 
 naInstance.addEventListener('mouseout', function () {
-    naScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+    naScrollIntervalId = window.setInterval(naScrollIntervalFunction, autoPlayingDuration);
 });
 
 naInstance.addEventListener('scrollend', function () {
@@ -125,7 +125,7 @@ naInstance.addEventListener('scrollend', function () {
 
 // best seller (bs)
 var bsShowingCount = 4;
-var bsCount = newArrivalProducts.length;
+var bsCount = bestSellerProducts.length;
 var bsProductNeedToBeShowed = bsCount - bsShowingCount;
 var bsInstance = document.querySelector('#best-seller-container');
 var bsWidth = bsInstance.scrollWidth;
@@ -136,7 +136,7 @@ var bsItemWidth = bsItemInstance.clientWidth;
 var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
 var bsCurrentScroll = 0;
 
-var scrollIntervalFunction = function () {
+var bsScrollIntervalFunction = function () {
     if(bsCurrentScroll + bsItemWidth <= bsMaxScroll)
     {
         bsCurrentScroll += bsItemWidth;
@@ -150,14 +150,14 @@ var scrollIntervalFunction = function () {
     });
 };
 
-var bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+var bsScrollIntervalId = window.setInterval(bsScrollIntervalFunction, autoPlayingDuration);
 
 bsInstance.addEventListener('mouseover', function () {
     window.clearInterval(bsScrollIntervalId);
 });
 
 bsInstance.addEventListener('mouseout', function () {
-    bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+    bsScrollIntervalId = window.setInterval(bsScrollIntervalFunction, autoPlayingDuration);
 });
 
 bsInstance.addEventListener('scrollend', function () {
