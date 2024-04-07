@@ -124,43 +124,43 @@ naInstance.addEventListener('scrollend', function () {
 // end of new arrival
 
 // best seller (bs)
-// var bsShowingCount = 4;
-// var bsCount = newArrivalProducts.length;
-// var bsProductNeedToBeShowed = bsCount - bsShowingCount;
-// var bsInstance = document.querySelector('#best-seller-container');
-// var bsWidth = bsInstance.scrollWidth;
+var bsShowingCount = 4;
+var bsCount = newArrivalProducts.length;
+var bsProductNeedToBeShowed = bsCount - bsShowingCount;
+var bsInstance = document.querySelector('#best-seller-container');
+var bsWidth = bsInstance.scrollWidth;
 
-// var bsItemInstance = document.querySelector('#best-seller-container .product');
-// var bsItemWidth = bsItemInstance.clientWidth;
+var bsItemInstance = document.querySelector('#best-seller-container .product');
+var bsItemWidth = bsItemInstance.clientWidth;
 
-// var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
-// var bsCurrentScroll = 0;
+var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
+var bsCurrentScroll = 0;
 
-// var scrollIntervalFunction = function () {
-//     if(bsCurrentScroll + bsItemWidth <= bsMaxScroll)
-//     {
-//         bsCurrentScroll += bsItemWidth;
-//     } else {
-//         bsCurrentScroll = 0;
-//     }
+var scrollIntervalFunction = function () {
+    if(bsCurrentScroll + bsItemWidth <= bsMaxScroll)
+    {
+        bsCurrentScroll += bsItemWidth;
+    } else {
+        bsCurrentScroll = 0;
+    }
 
-//     bsInstance.scroll({
-//         left: bsCurrentScroll,
-//         behavior: "smooth"
-//     });
-// };
+    bsInstance.scroll({
+        left: bsCurrentScroll,
+        behavior: "smooth"
+    });
+};
 
-// var bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+var bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
 
-// bsInstance.addEventListener('mouseover', function () {
-//     window.clearInterval(bsScrollIntervalId);
-// });
+bsInstance.addEventListener('mouseover', function () {
+    window.clearInterval(bsScrollIntervalId);
+});
 
-// bsInstance.addEventListener('mouseout', function () {
-//     bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
-// });
+bsInstance.addEventListener('mouseout', function () {
+    bsScrollIntervalId = window.setInterval(scrollIntervalFunction, autoPlayingDuration);
+});
 
-// bsInstance.addEventListener('scrollend', function () {
-//     bsCurrentScroll = Math.ceil(bsInstance.scrollLeft / 330) * bsItemWidth;
-// });
+bsInstance.addEventListener('scrollend', function () {
+    bsCurrentScroll = Math.round(bsInstance.scrollLeft / 330) * bsItemWidth;
+});
 // end of best seller
