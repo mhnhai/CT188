@@ -1,15 +1,6 @@
-// Danh sách dữ liệu quần áo
-var clothesData = [
-    { id: 1, name: 'Áo sơ mi', category: 'Áo', soluong: 10},
-    { id: 2, name: 'Quần jeans', category: 'Quần', soluong: 10},
-    { id: 3, name: 'Váy dài', category: 'Váy', soluong: 10},
-    { id: 4, name: 'Áo len', category: 'Áo', soluong: 10},
-    { id: 5, name: 'Quần short', category: 'Quần', soluong: 10},
-    { id: 6, name: 'Áo khoác', category: 'Áo', soluong: 10},
-    { id: 7, name: 'Áo thun', category: 'Áo', soluong: 10},
-    { id: 8, name: 'Quần âu', category: 'Quần', soluong: 10}, 
-];
+window.onload = function(){
 
+<<<<<<< Updated upstream:admin.js
 // Kiểm tra xem Local Storage có hỗ trợ không
 if (typeof(Storage) !== "undefined") {
     // Nếu đã có dữ liệu sản phẩm trong Local Storage, lấy dữ liệu từ Local Storage
@@ -47,3 +38,43 @@ function showContent(contentId) {
 //     document.getElementById('product-tbody').innerHTML = clothesTable;
 // }
 
+=======
+    // get data từ localstorage
+    products = getListProducts() || products;
+  }
+  
+  // ========= Các hàm liên quan tới danh sách sản phẩm =========
+  function setListProducts(newList){
+      window.localStorage.setItem('products',JSON.stringify(newList));
+  }
+  
+  function getListProducts(newList){
+      return JSON.parse(window.localStorage.getItem('products'));
+  }
+  
+  function showContent(contentId) {
+      var contents = document.getElementsByClassName('content');
+      for (var i = 0; i < contents.length; i++) {
+          contents[i].style.display = 'none';
+      }
+      document.getElementById(contentId).style.display = 'block';
+  
+       if (contentId === 'products') {
+          // Hiển thị nội dung danh mục sản phẩm 
+          displayClothes();
+      }
+  }
+  
+  function displayClothes() {
+    // localStorage.clear();
+      var clothesTable = '<tbody id="product-tbody">';
+      // Lấy dữ liệu từ localStorage và chuyển đổi thành danh sach
+      products.forEach(function(clothes) {
+          clothesTable += '<tr><td>' + clothes.id + '</td><td>' + clothes.productName + '</td><td>' + clothes.image + '</td><td id="soluong">' + clothes.price + '</td></tr>';
+      });
+      clothesTable += '</tbody>'; 
+      document.getElementById('product-tbody').innerHTML = clothesTable;
+  }
+  
+  
+>>>>>>> Stashed changes:JavaScripts/Admin.js
