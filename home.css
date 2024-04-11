@@ -56,7 +56,7 @@ body {
 }
 
 .header-container-fluid {
-    background: #1c1c1c;
+    background: #363636;
 }
 
 .header {
@@ -170,6 +170,30 @@ body {
     }
 }
 
+.product-carousel-item {
+    /* width: 25%; */
+}
+
+#carouselExampleAutoplaying_newArrival {
+    margin: 0 -12px;
+
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        flex: 0 0 calc(100% / 4);
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: black;
+    }
+}
+
 footer {
     background-color: #1c1c1c;
     color: #c2c2c2;
@@ -198,16 +222,18 @@ footer p {
     max-width: 170px;
 }
 
-.contact > .address, .contact > .phone, .contact > .mail{
+.contact > .address,
+.contact > .phone,
+.contact > .mail {
     display: flex;
     gap: 5px;
 }
 
-.contact svg{
+.contact svg {
     height: 20px;
 }
 
-.footer_container{
+.footer_container {
     display: flex;
     justify-content: space-between;
 }
