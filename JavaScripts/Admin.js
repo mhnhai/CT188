@@ -13,18 +13,27 @@ window.onload = function(){
       return JSON.parse(window.localStorage.getItem('products'));
   }
   
-  function showContent(contentId) {
-      var contents = document.getElementsByClassName('content');
-      for (var i = 0; i < contents.length; i++) {
-          contents[i].style.display = 'none';
-      }
-      document.getElementById(contentId).style.display = 'block';
-  
-       if (contentId === 'products') {
-          // Hiển thị nội dung danh mục sản phẩm 
-          displayClothes();
-      }
-  }
+  document.addEventListener("DOMContentLoaded", function() {
+    // Lấy danh sách các thẻ <a> trong các <li> và thêm sự kiện "click" cho mỗi thẻ
+    var links = document.querySelectorAll(".nav-link");
+    links.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+        // Lấy giá trị của thuộc tính "value" của thẻ <a>
+        var id = this.getAttribute("data");
+        // Ẩn tất cả các div có class "content"
+        var contents = document.querySelectorAll(".content");
+        contents.forEach(function(content) {
+          content.classList.remove("d-block");
+          content.classList.add("d-none");
+        });
+        
+        // Hiển thị div có id tương ứng với giá trị của thẻ <a> được nhấn
+        document.getElementById(id).classList.remove("d-none");
+        document.getElementById(id).classList.add("d-block");
+      });
+    });
+ });
   
   function displayClothes() {
     // localStorage.clear();
