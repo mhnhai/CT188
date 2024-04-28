@@ -1,4 +1,4 @@
-import {importDataToLocalStorage, loadDataFromLocalStorage, brands, products} from "./Main";
+import {importDataToLocalStorage, loadDataFromLocalStorage, brands, products} from "./MainDB";
 
 function addProduct(product) {
   loadDataFromLocalStorage();

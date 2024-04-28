@@ -1,5 +1,4 @@
 import {importDataToLocalStorage, loadDataFromLocalStorage} from "./Main";
-
 // Đăng nhập
 function authenticateUser(userIdentify, password) {
     loadDataFromLocalStorage();

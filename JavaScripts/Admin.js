@@ -1,3 +1,5 @@
+
+
 // Danh sách dữ liệu quần áo
 var clothesData = [
     { id: 1, name: 'Áo sơ mi', category: 'Áo', soluong: 10},

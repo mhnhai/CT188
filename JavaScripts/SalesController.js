@@ -1,4 +1,4 @@
-import {importDataToLocalStorage, loadDataFromLocalStorage} from "./Main";
+import {loadDataFromLocalStorage, bills, purchasedProducts} from "./MainDB.js"
 
 function getBills() {
     loadDataFromLocalStorage();
