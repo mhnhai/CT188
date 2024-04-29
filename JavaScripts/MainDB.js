@@ -1,3 +1,4 @@
+
 window.roles = [
   {"id": 1, "name": "Admin"},
   {"id": 2, "name": "Customers"}
@@ -53,6 +54,3 @@ window.loadDataFromLocalStorage = function() {
   window.bills = localStorage.getItem('bills') ? JSON.parse(localStorage.getItem('bills')) : window.bills;
   window.purchasedProducts = localStorage.getItem('purchasedProducts') ? JSON.parse(localStorage.getItem('purchasedProducts')) : window.purchasedProducts;
 };
-
-
-
