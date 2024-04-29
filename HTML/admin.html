@@ -19,19 +19,16 @@
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" onclick="showContent('home')"><i class="bi-house"></i>Trang chủ</a>
+                            <a class="nav-link active"><i class="bi-house"></i>Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('brands')"><i class="bi-people"></i>Nhãn hàng</a>
+                            <a class="nav-link" ><i class="bi-microsoft"></i>Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('products')"><i class="bi-microsoft"></i>Sản phẩm</a>
+                            <a class="nav-link"><i class="bi-bag-check"></i>Quản lý đơn hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('orders')"><i class="bi-bag-check"></i>Quản lý đơn hàng</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="showContent('customers')"><i class="bi-people"></i>Khách hàng</a>
+                            <a class="nav-link"><i class="bi-people"></i>Khách hàng</a>
                         </li>
                         <hr>
                         <li class="nav-item">
@@ -120,7 +117,7 @@
             
                             <!-- begin tables -->
                             <div class="row" id="dashboard-table">
-                                <div class="table-responsive col-md-6"> 
+                                <!-- <div class="table-responsive col-md-6"> 
                                     <h4>Lịch sử nhập hàng</h4>
                                     <table class="table table-dark table-bordered">
                                         <thead>
@@ -163,56 +160,64 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="products" class="content" style="display:none;">
-                    <h1>Nội dung của trang sản phẩm</h1>
-                        <table class="table table-dark table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Loại sản phẩm</th>                                    
-                                    <th>Số lượng</th>
-                                </tr>
-                            </thead>
-                            <tbody id="product-tbody">
-                            </tbody>
-                        </table>                   
-                 </div>
-                <div id="orders" class="content" style="display:none;">Nội dung của trang Quản lý đơn hàng</div>
-                <div id="customers" class="content" style="display:none;">Nội dung của trang Khách hàng</div>
-                <div id="brands" class="content" style="display:none;">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary" type="button">Thêm nhãn hàng mới</button>
+                        <button class="btn btn-primary" type="button">Thêm sản phẩm mới</button>
                     </div>
                     <table class="table table-dark table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên nhãn hàng</th>
-                                <th>Số lượng sản phẩm</th>    
-                                <th>Số lượng sản phẩm</th>                                
+                                <th>Tên sản phẩm</th>
+                                <th>Loại sản phẩm</th>                                    
+                                <th>Số lượng</th>
                             </tr>
-                        
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <tbody id="product-tbody">
                         </tbody>
+                    </table>                   
+                 </div>
+                <div id="orders" class="content" style="display:none;">
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Khách hàng</th>
+                                <th>Số lượng sản phẩm</th>    
+                                <th>Giá trị đơn hàng</th>                                
+                            </tr>
+                        </thead>
+                        <tbody id="bills-tbody">
                     </table>    
+                </div>
+                <div id="customers" class="content" style="display:none;">
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên khách hàng</th>
+                                <th>Số lượng đơn hàng</th>                                    
+                            </tr>
+                        </thead>
+                        <tbody id="customers-tbody">
+                        </tbody>
+                    </table>        
                 </div>
             </div>
         </div>
     </div>
     <!-- <script src="../JavaScripts/Admin.js"></script> -->
-    <script type="module" src="../JavaScripts/test.js"></script>
+    <script type="module" src="../JavaScripts/AdminEventHandle.js"></script>
+    <script type="module" src="../JavaScripts/Admin.js"></script>
+    <script src="../JavaScripts/MainDB.js"></script>
+    <script src="../JavaScripts/SalesController.js"></script>
+    <script src="../JavaScripts/EnterProductsController.js"></script>
+    <script src="../JavaScripts/UserController.js"></script>
+    <script src="../JavaScripts/UserService.js"></script>
 </body>
 </html>

@@ -1,22 +1,28 @@
-import {loadDataFromLocalStorage, bills, purchasedProducts} from "./MainDB.js"
-
-function getBills() {
+window.getBills = function () {
     loadDataFromLocalStorage();
     return bills;
 }
 
-function getBill(billID) {
+window.getBill = function (billID) {
     loadDataFromLocalStorage();
     return bills.find(bill => bill.id === billID);
 }
 
-function getPurchasedProducts(billID) {
+window.getPurchasedProducts = function (billID) {
     loadDataFromLocalStorage();
     return purchasedProducts.filter(product => product.billID === billID);
 }
 
-exports = {
-    getBills,
-    getBill,
-    getPurchasedProducts
-};
+window.getBillValue = function (billID) {
+    const purchasedProductsInBill = purchasedProducts.filter(purchasedProduct => purchasedProduct.billID === billID);
+  
+    let totalValue = 0;
+    for (const purchasedProduct of purchasedProductsInBill) {
+      const product = products.find(product => product.id === purchasedProduct.productID);
+      if (product) {
+        totalValue += product.price * purchasedProduct.amount;
+      }
+    }
+    
+    return totalValue;
+}
