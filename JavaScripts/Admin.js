@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 window.onload = function(){
 
@@ -46,4 +47,14 @@ window.onload = function(){
       clothesTable += '</tbody>'; 
       document.getElementById('product-tbody').innerHTML = clothesTable;
   }
+=======
+import { handleActiveTabs, showContent } from '../JavaScripts/AdminEventHandle.js';
+
+// importDataToLocalStorage();
+importDataToLocalStorage();
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleActiveTabs();
+});
+>>>>>>> Stashed changes
 
