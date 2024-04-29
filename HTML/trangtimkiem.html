@@ -22,6 +22,7 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="../StyleSheets/home.css" />
         <link rel="stylesheet" href="../StyleSheets/trangtimkiem.css">
+        <script src="../JavaScripts/MainDB.js"></script>
         <script src="../JavaScripts/trangtimkiem.js"> </script>
     </head>
 
@@ -40,18 +41,16 @@
                         đơn từ 1,500,000đ
                     </div>
                     <div class="col d-flex justify-content-end">
-                        <div class="input-group search-group">
-                            <input
-                                type="text"
-                                class="form-control input-search"
-                                placeholder="Tìm kiếm..."
-                            />
+                      <div class="input-group search-group">
+                        <form action="trangtimkiem.html" name="f1" method="get">
+                            <input type="text" class="form-control input-search" placeholder="Tìm kiếm..." onkeypress="kt()"/>
                             <button
-                                class="btn btn-outline-secondary btn-search"
-                            >
-                                <i data-feather="search"></i>
-                            </button>
-                        </div>
+                            class="btn btn-outline-secondary btn-search" onclick="timkiem()">
+                            <i data-feather="search"></i>
+                        </button>
+                        </form>
+                        
+                    </div>
                     </div>
                 </div>
             </div>

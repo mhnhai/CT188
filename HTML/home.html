@@ -21,6 +21,10 @@
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="../StyleSheets/home.css" />
+        <script src="../JavaScripts/MainDB.js"></script>
+        <script src="../JavaScripts/Home.js"></script>
+        <script src="../JavaScripts/trangtimkiem.js"> </script>
+
     </head>
 
     <body>
@@ -39,16 +43,14 @@
                     </div>
                     <div class="col d-flex justify-content-end">
                         <div class="input-group search-group">
-                            <input
-                                type="text"
-                                class="form-control input-search"
-                                placeholder="Tìm kiếm..."
-                            />
-                            <button
-                                class="btn btn-outline-secondary btn-search"
-                            >
+                            <form action="trangtimkiem.html" name="f1" method="get">
+                                <input type="text" class="form-control input-search" placeholder="Tìm kiếm..." onkeypress="kt()"/>
+                                <button
+                                class="btn btn-outline-secondary btn-search" onclick="timkiem()">
                                 <i data-feather="search"></i>
                             </button>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -85,7 +87,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< Updated upstream
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -99,7 +100,6 @@
     <!-- end of banner -->
     <script src="../JavaScripts/Home.js"></script>
 </body>
-=======
         </div>
         <!-- end of navigation bar -->
         <!-- banner -->
@@ -328,8 +328,6 @@
         </div>
         <!-- end of main -->
         <!-- footer -->
->>>>>>> Stashed changes
-
         <footer>
             <div class="container-fluid mt-5">
                 <div class="container footer_container py-4">
@@ -434,6 +432,5 @@
                 <p>Copyright &COPY 2024 lush. Powered by Lush-team</p>
             </div>
         </footer>
-        <script src="../JavaScripts/home.js"></script>
     </body>
 </html>
