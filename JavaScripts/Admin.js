@@ -1,3 +1,4 @@
+
 window.onload = function(){
 
     // get data từ localstorage
@@ -45,5 +46,4 @@ window.onload = function(){
       clothesTable += '</tbody>'; 
       document.getElementById('product-tbody').innerHTML = clothesTable;
   }
-  
-  
+
