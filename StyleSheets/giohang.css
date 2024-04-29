@@ -1,0 +1,133 @@
+*{
+ padding: 0;
+ margin: 0;
+}
+a{
+  text-decoration: none;
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-input {
+    width: 50px;
+    text-align: center;
+  }
+  
+  .decrease,
+  .increase {
+    width: 30px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .decrease:hover,
+  .increase:hover {
+    background-color: #e0e0e0;
+  }
+  .hovertrash:hover{
+    color: black;
+  }
+  .containerDIV a,
+.containerDIV label {
+  display: block;
+}
+.tenSanPham{
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline;
+  color: black;
+}
+.btnhv{
+  margin-top: 30px;
+  padding: 15px 25px;
+  border-radius: 0px;
+  border: 1px solid blue;
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  overflow:hidden;
+  background-color: blue;
+  z-index: 9;
+}
+.btnhv::before{
+  content: "";
+  position: absolute;
+  border: 1px solid blue;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: -100%;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.btnhv:hover::before{ 
+  left: 0;
+}
+.btnhv span{
+  z-index: 10;
+}
+.btnhv:hover span{
+  transition: all 0.5s ease-in-out;
+  color: black;
+}
+#checkout{
+  margin-top: 30px;
+  padding: 15px 25px;
+  border-radius: 0px;
+  border: 1px solid crimson;
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  overflow:hidden;
+  background-color: crimson;
+  z-index: 9;
+}
+#checkout::before{
+  content: "";
+  position: absolute;
+  border: 1px solid crimson;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: -100%;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+
+#checkout:hover::before{ 
+  left: 0;
+}
+#checkout span{
+  z-index: 10;
+}
+#checkout:hover span{
+  transition: all 0.5s ease-in-out;
+  color: black;
+}
+tr {
+  border-bottom: 1px solid lightgray;
+}
+tr td {
+  padding: 10px;
+}
+.textarea-container {
+  margin-top: 10px;
+}
+
+#myTextarea {
+  width: 100%; /* Đảm bảo rằng textarea lấp đầy phần tử container */
+  box-sizing: border-box; /* Đảm bảo rằng kích thước của textarea không bị thay đổi bởi padding hay border */
+  padding: 25px;
+}
