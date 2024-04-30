@@ -182,8 +182,33 @@ function getUser() {
     
     var urlWithoutQueryString = window.location.pathname;
     history.replaceState(null, '', urlWithoutQueryString);
-
+    // if(currentUser == null) return;
     document.getElementById("user-name").innerHTML = getUserDetails(urlParams.get("identify")).userName;
-    document.getElementById("cart-count").innerHTML = getCartByUser(urlParams.get("identify")).items.length;
+    document.getElementById("cart-count").innerHTML = getCartByUser(urlParams.get("identify")).length;
 }
 getUser();
+
+function renderProducts(products, element) {
+    const container = document.getElementById(element); // Assuming you have a container element with id "product-container"
+    let html = "";
+
+    products.forEach(product => {
+        html += `
+            <div class="product col-3">
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.productName}" />
+                </div>
+                <div class="product-name">
+                    ${product.productName}
+                </div>
+                <div class="product-price">
+                    <span class="discounted">${product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</span>
+                </div>
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+renderProducts(products, "new-arrival-container");
+renderProducts(products, "best-seller-container");

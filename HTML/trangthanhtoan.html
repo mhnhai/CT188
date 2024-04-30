@@ -163,38 +163,15 @@
                   <p style="text-align: center;">Khi Shipper đến nhận hàng , vui lòng trả tiền trực tiếp cho Shipper !</p>
                 </div>
                 <a href="#">Giỏ hàng</a>
-                <button  type="submit" class="btn btn-primary buttonlast">
+                <div  onclick="purchase()" class="btn btn-primary buttonlast">
                   Hoàn tất đơn hàng
-                </button>
+                </div>
               </div>
             </form>
           </div>
         </div>
-          <div class="col-sm-9 col-md-6 col-lg-6 bg-white text-black">
-            <div class="row hienthisp">
-              <div class="col-sm-3 col-md-4">
-                  <img style="border: 1px solid black; border-radius: 10px;"  width="60px" src="images/Áo.jpg" alt=""><sup><label style="font-size: 30px;" for="">2</label></sup>
-              </div>
-              <div class="col-sm-9 col-md-4">
-                <p>TSUN Emotions Tee - Metal Blue <br>
-                  S</p>
-              </div>
-              <div class="col-sm-9 col-md-4">
-                <p>870,000₫</p>
-              </div>
-            </div>
-            <div class="row hienthisp">
-              <div class="col-sm-3 col-md-4">
-                  <img style="border: 1px solid black; border-radius: 10px;"  width="60px" src="images/Áo.jpg" alt=""><sup><label style="font-size: 30px;" for="">2</label></sup>
-              </div>
-              <div class="col-sm-9 col-md-4">
-                <p>TSUN Emotions Tee - Metal Blue <br>
-                  S</p>
-              </div>
-              <div class="col-sm-9 col-md-4">
-                <p>870,000₫</p>
-              </div>
-            </div>
+          <div class="col-sm-9 col-md-6 col-lg-6 bg-white text-black"> 
+            <div id="cart-items-container"></div>
             <form action="/action_page.php">
                   <div class="mb-3 mt-3 ">
                       <div class="row">
@@ -209,15 +186,20 @@
             </form>
             <a href="#">Xem thêm mã giảm giá</a>
             <hr>
-            <p class="divlast">Tạm tính <label class="rightposition"  for="">100000₫</label></p>
-            <p class="divlast">Phí Vận Chuyển <label class="rightposition" for="">100000₫</label></p>
+            <p class="divlast" >Tạm tính <label class="rightposition"  for="" id="bill-value">100000₫</label></p>
+            <p class="divlast">Phí Vận Chuyển <label class="rightposition" for="">350000₫</label></p>
 
             <hr>
-            <h5 class="divlast">Tổng cộng <label class="rightposition" for="">VND 10000₫</label></h5>
+            <h5 class="divlast">Tổng cộng <label class="rightposition" for="" id="sum-value">VND 10000₫</label></h5>
           </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="../JavaScripts/MainDB.js"></script>
+        <script src="../JavaScripts/SalesController.js"></script>
+        <script src="../JavaScripts/UserController.js"></script>
+        <script src="../JavaScripts/UserService.js"></script>
+        <script src="../JavaScripts/trangthanhtoan.js"></script>
   </body>
 </html>

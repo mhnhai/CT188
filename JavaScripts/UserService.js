@@ -71,14 +71,14 @@ window.getCartByUser = function(userIdentify) {
         
         if (product) {
             userCart.items.push({
-                productId: cartItem.productID,
+                productID: cartItem.productID,
                 productName: product.productName,
                 amount: cartItem.amount
             });
         }
     });
     
-    return userCart;
+    return userCart.items;
 };
 
 window.viewItemDetail = function(productID) {
@@ -108,11 +108,12 @@ window.generateBill = function(userIdentify, itemsToPurchase) {
         }
         window.purchasedProducts.push({ billID: newBillId, productID: item.productID, amount: amountToPurchase});
         const productIndex = window.products.findIndex(product => product.id === item.productID);
-            if (productIndex !== -1) {
-                window.products[productIndex].amount -= amountToPurchase;
-            }
+        if (productIndex !== -1) {
+            window.products[productIndex].amount -= amountToPurchase;
+        }
     });
 
+    // Remove purchased items from addToCarts
     itemsToPurchase.forEach(item => {
         const cartItemIndex = window.addToCarts.findIndex(cartItem => cartItem.userIdentify === userIdentify && cartItem.productID === item.productID);
         if (cartItemIndex !== -1) {
@@ -122,6 +123,7 @@ window.generateBill = function(userIdentify, itemsToPurchase) {
             }
         }
     });
+
     importDataToLocalStorage();
     return newBill;
 };

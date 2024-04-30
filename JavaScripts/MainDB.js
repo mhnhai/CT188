@@ -5,40 +5,37 @@ window.roles = [
 ];
 
 window.accounts = [
-  {"id": 1,"userIdentify": "Admin1","password": "12345678","userName": "Nguyen Toi","roleID": 1},
-  {"id": 2,"userIdentify": "adminb2113322","password": "Toi@1234","userName": "Nguyen Toi","roleID": 1},
-  {"id": 3,"userIdentify": "toib2113322","password": "Toi@1234","userName": "Nguyen Toi","roleID": 2}
+  {"id": 1,"userIdentify": "adminb2113322","password": "Toi@1234","userName": "Nguyễn Tới","roleID": 1},
+  {"id": 2,"userIdentify": "toib2113322","password": "Toi@1234","userName": "Nguyễn Tới","roleID": 2},
+  {"id": 3,"userIdentify": "toic2113322","password": "Toi@1234","userName": "Nguyễn Tới","roleID": 2}
 ];
 
 window.products = [
-  {"id": 1,"productName": "","image": "url","price": 60000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 2,"productName": "","image": "url","price": 20000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 3,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 4,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 5,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 6,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 7,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 8,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 9,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]}
+  {"id": 1,"productName": "pant1","image": "../images/pants/pants1.jpg","price": 223000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]},
+  {"id": 2,"productName": "pant2","image": "../images/pants/pants2.jpg","price": 356000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]},
+  {"id": 3,"productName": "pant3","image": "../images/pants/pants3.jpg","price": 356000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]},
+  {"id": 4,"productName": "pant4","image": "../images/pants/pants4.jpg","price": 356000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]},
+  {"id": 5,"productName": "pant5","image": "../images/pants/pants5.jpg","price": 356000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]},
+  {"id": 6,"productName": "pant6","image": "../images/pants/pants6.jpg","price": 356000,"category": "Quần", "amount": 10,"sizes": ["S","M","L","XL"]}
 ];
 
 window.addToCarts = [
-  {"userIdentify": "user1","productID": 1,"amount": 1},
-  {"userIdentify": "user1","productID": 2,"amount": 1}
+  {"userIdentify": "toib2113322","productID": 1,"amount": 1},
+  {"userIdentify": "toib2113322","productID": 2,"amount": 2},
+  {"userIdentify": "toib2113322","productID": 3,"amount": 1},
+  {"userIdentify": "toib2113322","productID": 4,"amount": 3},
+  {"userIdentify": "toic2113322","productID": 4,"amount": 3}
 ];
 
 window.bills = [
-  {"id": 1,"userIdentify": "user1"},
-  {"id": 2,"userIdentify": "user1"}
+  {"id": 1,"userIdentify": "toib2113322"},
+  {"id": 2,"userIdentify": "toib2113322"}
 ];
 
 window.purchasedProducts = [
   {"billID": 1,"productID": 1,"amount": 1},
-  {"billID": 1,"productID": 2,"amount": 1}
+  {"billID": 2,"productID": 2,"amount": 1}
 ];
-
-window.currentUser;
-window.userCart;
 
 window.importDataToLocalStorage = function() {
   localStorage.setItem('roles', JSON.stringify(window.roles));

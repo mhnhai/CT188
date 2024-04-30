@@ -66,14 +66,14 @@
                 </div>
                 <div class="col-3">
                     <div class="d-flex justify-content-end me-4">
-                        <a href="#" class="btn-login">
+                        <!-- <a href="#" class="btn-login">
                             <i data-feather="users"></i>
                             <span>Đăng nhập</span>
                         </a>
                         <div class="cart-container">
                             <i data-feather="shopping-bag"></i>
                             <span class="count">0</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -102,86 +102,8 @@
                                             <th class="remove">&nbsp;</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="line-item-container" data-variant-id="1121191185">
-                                            <td class="image">
-                                                <div style="padding-left: 20px;" class="product_image">
-                                                    <a href="/products/tsun-emotions-tee-metal-blue">
-                                                        <img width="100px" height="160px" src="../images/Áo.jpg" alt="TSUN Emotions Tee - Metal Blue" />
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="item" style="padding-left: 30px;">
-                                                <a href="/products/tsun-emotions-tee-metal-blue" class="tenSanPham">
-                                                    <label >TSUN Emotions Tee - Metal Blue</label>
-                                                </a>
-                                                <p>
-                                                    <span>290000</span>₫
-                                                </p>
-                                                <p class="variant">
-                                                    <span class="variant_title">S</span>
-                                                </p>														
-                                                <div class="qty quantity-partent qty-click clearfix">
-                                                    <div class="quantity-control">
-                                                        <button class="decrease">-</button>
-                                                        <input type="text" class="quantity-input" value="1">
-                                                        <button class="increase">+</button>
-                                                    </div>
-                                                </div>														
-                                            </td>
-                                            <td style="float: fight;" class="remove">
-                                                <a href="/cart/change?line=1&quantity=0" class="cart hovertrash" title="Xóa sản phẩm này">
-                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                </a>
-                                                <br><br><br>
-                                                <p class="price" style="float: right;">
-                                                    <div>
-                                                        <span class="text">Thành tiền:</span>
-                                                        <span class="line-item-total">0</span>₫
-                                                    </div>
-                                                </p>
-                                            </td>
-                                        </tr    >
+                                    <tbody id="cart-items-container">
                                         
-                                        <tr class="line-item-container" data-variant-id="1121191185">
-                                            <td class="image">
-                                                <div style="padding-left: 20px;" class="product_image">
-                                                    <a href="/products/tsun-emotions-tee-metal-blue">
-                                                        <img width="100px" height="160px" src="../images/Áo.jpg" alt="TSUN Emotions Tee - Metal Blue" />
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="item" style="padding-left: 30px;">
-                                                <a href="/products/tsun-emotions-tee-metal-blue" class="tenSanPham">
-                                                    <label >TSUN Emotions Tee - Metal Blue</label>
-                                                </a>
-                                                <p>
-                                                    <span>290000</span>₫
-                                                </p>
-                                                <p class="variant">
-                                                    <span class="variant_title">S</span>
-                                                </p>														
-                                                <div class="qty quantity-partent qty-click clearfix">
-                                                    <div class="quantity-control">
-                                                        <button class="decrease">-</button>
-                                                        <input type="text" class="quantity-input" value="1">
-                                                        <button class="increase">+</button>
-                                                    </div>
-                                                </div>														
-                                            </td>
-                                            <td class="remove">
-                                                <a href="/cart/change?line=1&quantity=0" class="cart hovertrash" title="Xóa sản phẩm này">
-                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                </a>
-                                                <br><br><br>
-                                                <p class="price" style="float: right;">
-                                                    <div>
-                                                        <span class="text">Thành tiền:</span>
-                                                        <span class="line-item-total">0</span>₫
-                                                    </div>
-                                                </p>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -194,13 +116,11 @@
                                 
                                     <p style="font-weight: bolder; font-size: 25px; position: absolute; padding-right: 70px; bottom: 20%; right: 0;" class="order-infor">					
                                         Tổng tiền:
-                                        <span class="total_price"><b>0</b></span>₫
+                                        <span class="total_price" id="cart-value"><b>0</b></span>₫
                                     </p>
                                     <div style="position: absolute; padding-right: 70px; bottom: 0; right: 0;" class="cart-buttons">
-                                        
-                                        <button class="btnhv" id="abutton" onclick="window.location.href = 'trangsanpham.html';" title="Tiếp tục mua hàng"><span><i class="fa fa-reply"></i>Tiếp tục mua hàng</span></button>
-                                        <button class="btnhv" type="submit" id="update-cart"  name="update" value="" ><span>Cập nhật</span></button>
-                                        <button class="btnhv" type="submit" id="checkout"  name="checkout" value="" ><span>Thanh toán</span></button>
+                                        <a href="./home.html" class="btnhv" id="abutton">Tiếp tục mua hàng</a>
+                                        <a href="./trangthanhtoan.html" class="btnhv" id="checkout">Thanh toán</a>
                                     </div>
                             </div>
                         </div>
@@ -320,8 +240,10 @@
         <p>Copyright &COPY 2024 lush. Powered by Lush-team</p>
     </div>
 </footer>
-
-
-
-
+        <script src="../JavaScripts/MainDB.js"></script>
+        <script src="../JavaScripts/SalesController.js"></script>
+        <script src="../JavaScripts/UserController.js"></script>
+        <script src="../JavaScripts/UserService.js"></script>
+        <script src="../JavaScripts/giohang.js"></script>
+</body>
 </html>
