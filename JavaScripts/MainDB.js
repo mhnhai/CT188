@@ -1,4 +1,3 @@
-
 window.roles = [
   {"id": 1, "name": "Admin"},
   {"id": 2, "name": "Customers"}
@@ -11,15 +10,15 @@ window.accounts = [
 ];
 
 window.products = [
-  {"id": 1,"productName": "","image": "url","price": 60000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 2,"productName": "","image": "url","price": 20000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 3,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 4,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 5,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 6,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 7,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 8,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
-  {"id": 9,"productName": "","image": "url","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]}
+  {"id": 1,"productName": "vay","image": "../images/products/id001.jpg","price": 60000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 2,"productName": "quan","image": "../images/products/id002.jpg","price": 20000,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 3,"productName": "ao","image": "../images/products/id003.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 4,"productName": "d","image": "../images/products/id004.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 5,"productName": "ao","image": "../images/products/id005.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 6,"productName": "a","image": "../images/products/id005.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 7,"productName": "bb","image": "../images/products/id007.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 8,"productName": "c","image": "../images/products/id001.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]},
+  {"id": 9,"productName": "ac","image": "../images/products/id001.jpg","price": 0,"category": "Ao", "amount": 0,"sizes": ["S","M","L","XL"]}
 ];
 
 window.addToCarts = [
@@ -54,3 +53,6 @@ window.loadDataFromLocalStorage = function() {
   window.bills = localStorage.getItem('bills') ? JSON.parse(localStorage.getItem('bills')) : window.bills;
   window.purchasedProducts = localStorage.getItem('purchasedProducts') ? JSON.parse(localStorage.getItem('purchasedProducts')) : window.purchasedProducts;
 };
+
+
+

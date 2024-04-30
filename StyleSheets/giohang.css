@@ -131,3 +131,6 @@ tr td {
   box-sizing: border-box; /* Đảm bảo rằng kích thước của textarea không bị thay đổi bởi padding hay border */
   padding: 25px;
 }
+select{
+  height: 50px;
+}
