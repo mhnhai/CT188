@@ -1,4 +1,4 @@
-// feather.replace();
+feather.replace();
 
 var newArrivalProducts = [
     {
