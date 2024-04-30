@@ -6,8 +6,8 @@ window.roles = [
 
 window.accounts = [
   {"id": 1,"userIdentify": "Admin1","password": "12345678","userName": "Nguyen Toi","roleID": 1},
-  {"id": 2,"userIdentify": "user1","password": "12345678","userName": "Nguyen Toi","roleID": 2},
-  {"id": 3,"userIdentify": "user2","password": "12345678","userName": "Nguyen Toi","roleID": 2}
+  {"id": 2,"userIdentify": "adminb2113322","password": "Toi@1234","userName": "Nguyen Toi","roleID": 1},
+  {"id": 3,"userIdentify": "toib2113322","password": "Toi@1234","userName": "Nguyen Toi","roleID": 2}
 ];
 
 window.products = [
@@ -36,6 +36,9 @@ window.purchasedProducts = [
   {"billID": 1,"productID": 1,"amount": 1},
   {"billID": 1,"productID": 2,"amount": 1}
 ];
+
+window.currentUser;
+window.userCart;
 
 window.importDataToLocalStorage = function() {
   localStorage.setItem('roles', JSON.stringify(window.roles));

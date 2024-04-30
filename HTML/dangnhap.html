@@ -20,25 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="home.css" />
-    <script>
-      function validateEmail() {
-        var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        let x = document.forms["myForm"]["lbemail"].value;
-        if (!re.test(x)) {
-          alert("Địa chỉ email không hợp lệ");
-          return false;
-        }
-      }
-      function checkpass() {
-        var y = document.forms["myForm"]["lbpswd"].value;
-        var x = document.forms["myForm"]["lbrepswd"].value;
-        if (x != y) {
-          alert("Mật Khẩu không khớp");
-          return false;
-        }
-      }
-    </script>
+    <!-- <link rel="stylesheet" href="home.css" /> -->
   </head>
   <body>
     <!-- header -->
@@ -108,63 +90,39 @@
       <div class="title_login1">
         <h1>Đăng nhập</h1>
       </div>
-      <form
-        onsubmit="return checkpass(event)"
-        name="myForm"
-        action="/action_page.php"
-      >
-                <div class="mb-3 mt-3 box-input">
-                  <label for="email"></label>
-                  <input
-                    type="email"
-                    class="form-control input1"
-                    id="email"
-                    required
-                    placeholder="Email"
-                    name="lbemail"
-                  />
-                </div>
-                <div class="mb-3 box-input">
-                  <label for="pwd"></label>
-                  <input
-                    type="password"
-                    class="form-control input1"
-                    id="pwd"
-                    required
-                    placeholder="Mật khẩu"
-                    name="lbpswd"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  />
-                </div>
-                <div class="mb-3 box-input">
-                  <div class="wrapbox-content-account">
-                    <div class="sitebox-recaptcha large_form">
-                      This site is protected by reCAPTCHA and the Google
-                      <a
-                        href="https://policies.google.com/privacy"
-                        target="_blank"
-                        rel="noreferrer"
-                        >Privacy Policy</a
-                      >
-                      and
-                      <a
-                        href="https://policies.google.com/terms"
-                        target="_blank"
-                        rel="noreferrer"
-                        >Terms of Service</a
-                      >
-                      apply.
-                    </div>
-                    <div class="btn111">
-                      <a href="#"><button type="submit" class="btn1 btn-primary">ĐĂNG NHẬP</button></a>
-                      <a href="register.html"><button class="btn1 btn-primary">ĐĂNG KÝ</button></a>
-                    </div>
-                  </div>
-                </div>
+      <form onsubmit="login()" name="myForm" action = "#">
+        <div class="mb-3 mt-3 box-input">
+          <label for="identify"></label>
+          <input
+            type="text"
+            class="form-control input1"
+            id="identify"
+            required
+            placeholder="Tên đăng nhập"
+            name="identify"
+          />
+        </div>
+        <div class="mb-3 box-input">
+          <label for="pwd"></label>
+          <input
+            type="password"
+            class="form-control input1"
+            id="pwd"
+            required
+            placeholder="Mật khẩu"
+            name="lbpswd"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+        </div>
+        <div class="mb-3 box-input">
+          <div class="wrapbox-content-account">
+            <div class="btn111">
+              <a href="#"><button type="submit" class="btn1 btn-primary">ĐĂNG NHẬP</button></a>
+              <a href="register.html"><button class="btn1 btn-primary">ĐĂNG KÝ</button></a>
+            </div>
+          </div>
+        </div>
     </div>
-  
-      
-
     <!-- <div class="container-fluid">
       <div class="container">
         new arrival -->
@@ -286,6 +244,12 @@
         <p>Copyright &COPY 2024 lush. Powered by Lush-team</p>
       </div>
     </footer>
-    <script src="home.js"></script>
+    
+    <script src="../JavaScripts/Login.js"></script>
+    <script src="../JavaScripts/MainDB.js"></script>
+    <script src="../JavaScripts/SalesController.js"></script>
+    <script src="../JavaScripts/EnterProductsController.js"></script>
+    <script src="../JavaScripts/UserController.js"></script>
+    <script src="../JavaScripts/UserService.js"></script>
   </body>
 </html>

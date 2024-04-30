@@ -1,4 +1,4 @@
-feather.replace();
+// feather.replace();
 
 var newArrivalProducts = [
     {
@@ -79,100 +79,108 @@ var bestSellerProducts = [
 ];
 
 // product
-var autoPlayingDuration = 3000;
+// var autoPlayingDuration = 3000;
 
 // new arrival (na)
-var naShowingCount = 4;
-var naCount = newArrivalProducts.length;
-var naProductNeedToBeShowed = naCount - naShowingCount;
-var naInstance = document.querySelector("#new-arrival-container");
-var naWidth = naInstance.scrollWidth;
+// var naShowingCount = 4;
+// var naCount = newArrivalProducts.length;
+// var naProductNeedToBeShowed = naCount - naShowingCount;
+// var naInstance = document.querySelector("#new-arrival-container");
+// var naWidth = naInstance.scrollWidth;
 
-var naItemInstance = document.querySelector("#new-arrival-container .product");
-var naItemWidth = naItemInstance.clientWidth;
+// var naItemInstance = document.querySelector("#new-arrival-container .product");
+// var naItemWidth = naItemInstance.clientWidth;
 
-var naMaxScroll = (naCount - naShowingCount) * naItemWidth;
-var naCurrentScroll = 0;
+// var naMaxScroll = (naCount - naShowingCount) * naItemWidth;
+// var naCurrentScroll = 0;
 
-var naScrollIntervalFunction = function () {
-    if (naCurrentScroll + naItemWidth <= naMaxScroll) {
-        naCurrentScroll += naItemWidth;
-    } else {
-        naCurrentScroll = 0;
-    }
+// var naScrollIntervalFunction = function () {
+//     if (naCurrentScroll + naItemWidth <= naMaxScroll) {
+//         naCurrentScroll += naItemWidth;
+//     } else {
+//         naCurrentScroll = 0;
+//     }
 
-    naInstance.scroll({
-        left: naCurrentScroll,
-        behavior: "smooth",
-    });
-};
+//     naInstance.scroll({
+//         left: naCurrentScroll,
+//         behavior: "smooth",
+//     });
+// };
 
-var naScrollIntervalId = window.setInterval(
-    naScrollIntervalFunction,
-    autoPlayingDuration
-);
+// var naScrollIntervalId = window.setInterval(
+//     naScrollIntervalFunction,
+//     autoPlayingDuration
+// );
 
-naInstance.addEventListener("mouseover", function () {
-    window.clearInterval(naScrollIntervalId);
-});
+// naInstance.addEventListener("mouseover", function () {
+//     window.clearInterval(naScrollIntervalId);
+// });
 
-naInstance.addEventListener("mouseout", function () {
-    naScrollIntervalId = window.setInterval(
-        naScrollIntervalFunction,
-        autoPlayingDuration
-    );
-});
+// naInstance.addEventListener("mouseout", function () {
+//     naScrollIntervalId = window.setInterval(
+//         naScrollIntervalFunction,
+//         autoPlayingDuration
+//     );
+// });
 
-naInstance.addEventListener("scrollend", function () {
-    naCurrentScroll =
-        Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
-});
+// naInstance.addEventListener("scrollend", function () {
+//     naCurrentScroll =
+//         Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
+// });
 // end of new arrival
 
 // best seller (bs)
-var bsShowingCount = 4;
-var bsCount = bestSellerProducts.length;
-var bsProductNeedToBeShowed = bsCount - bsShowingCount;
-var bsInstance = document.querySelector("#best-seller-container");
-var bsWidth = bsInstance.scrollWidth;
+// var bsShowingCount = 4;
+// var bsCount = bestSellerProducts.length;
+// var bsProductNeedToBeShowed = bsCount - bsShowingCount;
+// var bsInstance = document.querySelector("#best-seller-container");
+// var bsWidth = bsInstance.scrollWidth;
 
-var bsItemInstance = document.querySelector("#best-seller-container .product");
-var bsItemWidth = bsItemInstance.clientWidth;
+// var bsItemInstance = document.querySelector("#best-seller-container .product");
+// var bsItemWidth = bsItemInstance.clientWidth;
 
-var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
-var bsCurrentScroll = 0;
+// var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
+// var bsCurrentScroll = 0;
 
-var bsScrollIntervalFunction = function () {
-    if (bsCurrentScroll + bsItemWidth <= bsMaxScroll) {
-        bsCurrentScroll += bsItemWidth;
-    } else {
-        bsCurrentScroll = 0;
-    }
+// var bsScrollIntervalFunction = function () {
+//     if (bsCurrentScroll + bsItemWidth <= bsMaxScroll) {
+//         bsCurrentScroll += bsItemWidth;
+//     } else {
+//         bsCurrentScroll = 0;
+//     }
 
-    bsInstance.scroll({
-        left: bsCurrentScroll,
-        behavior: "smooth",
-    });
-};
+//     bsInstance.scroll({
+//         left: bsCurrentScroll,
+//         behavior: "smooth",
+//     });
+// };
 
-var bsScrollIntervalId = window.setInterval(
-    bsScrollIntervalFunction,
-    autoPlayingDuration
-);
+// var bsScrollIntervalId = window.setInterval(
+//     bsScrollIntervalFunction,
+//     autoPlayingDuration
+// );
 
-bsInstance.addEventListener("mouseover", function () {
-    window.clearInterval(bsScrollIntervalId);
-});
+// bsInstance.addEventListener("mouseover", function () {
+//     window.clearInterval(bsScrollIntervalId);
+// });
 
-bsInstance.addEventListener("mouseout", function () {
-    bsScrollIntervalId = window.setInterval(
-        bsScrollIntervalFunction,
-        autoPlayingDuration
-    );
-});
+// bsInstance.addEventListener("mouseout", function () {
+//     bsScrollIntervalId = window.setInterval(
+//         bsScrollIntervalFunction,
+//         autoPlayingDuration
+//     );
+// });
 
-bsInstance.addEventListener("scrollend", function () {
-    bsCurrentScroll =
-        Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
-});
+// bsInstance.addEventListener("scrollend", function () {
+//     bsCurrentScroll =
+//         Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
+// });
 // end of best seller
+
+function getUser() {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    document.getElementById("user-name").innerHTML = getUserDetails(urlParams.get("identify")).userName;
+    document.getElementById("cart-count").innerHTML = getCartByUser(urlParams.get("identify")).items.length;
+}
+getUser();

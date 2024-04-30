@@ -52,6 +52,35 @@ window.getItemFromCart = function(userIdentify, productID) {
     }
 };
 
+window.getCartByUser = function(userIdentify) {
+    loadDataFromLocalStorage(); 
+    
+    var userCartItems = window.addToCarts.filter(function(cartItem) {
+        return cartItem.userIdentify === userIdentify;
+    });
+    
+    var userCart = {
+        userIdentify: userIdentify,
+        items: []
+    };
+
+    userCartItems.forEach(function(cartItem) {
+        var product = window.products.find(function(product) {
+            return product.id === cartItem.productID;
+        });
+        
+        if (product) {
+            userCart.items.push({
+                productId: cartItem.productID,
+                productName: product.productName,
+                amount: cartItem.amount
+            });
+        }
+    });
+    
+    return userCart;
+};
+
 window.viewItemDetail = function(productID) {
     loadDataFromLocalStorage();
     const product = window.products.find(product => product.id === productID);

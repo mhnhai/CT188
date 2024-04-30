@@ -12,19 +12,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="home.css" />
+    <!-- <link rel="stylesheet" href="home.css" /> -->
     <script>
-        function validateEmail() {
-            var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            let x = document.forms["myForm"]["lbemail"].value;
-            if (!re.test(x)) {
-                alert("Địa chỉ email không hợp lệ");
-                return false;
-            }
-        }
         function checkpass() {
-            var y = document.forms["myForm"]["lbpswd"].value;
-            var x = document.forms["myForm"]["lbrepswd"].value;
+            var y = document.forms["myForm"]["pwd"].value;
+            var x = document.forms["myForm"]["repwd"].value;
             if (x != y) {
                 alert("Mật Khẩu không khớp");
                 return false;
@@ -97,30 +89,22 @@
         <div class="title_login1">
             <h1>Tạo Tài Khoản</h1>
         </div>
-        <form onsubmit="return checkpass(event)" name="myForm" action="/action_page.php">
-                <div class="mb-3 mt-3 box-input">
-                <input type="text" class="form-control input1" id="name" required placeholder="Họ"
-                    name="lbemail" />
-                </div>
+        <form onsubmit="createUser()" name="myForm" action="#">
                 <div class="mb-3 mt-3 box-input">
                     <input type="text" class="form-control input1" id="name" required placeholder="Tên"
-                        name="lbemail" />
+                        name="name" />
                 </div>
                 <div class="mb-3 mt-3 box-input">
-                    <label class="gender1" for="#"><input type="radio" name="gender" id="gender">Nam</label>
-                    <label for="#"><input type="radio" name="gender" id="gender">Nữ</label>
-                </div>
-                <div class="mb-3 mt-3 box-input">
-                    <input type="date" class="form-control input1" id="email" required placeholder="mm/dd/yyyy"
-                        name="lbemail" />
-                </div>
-                <div class="mb-3 mt-3 box-input">
-                    <input type="email" class="form-control input1" id="name" required placeholder="Email"
-                        name="lbemail" />
+                    <input type="text" class="form-control input1" id="identify" required placeholder="Tên đăng nhập"
+                        name="identify" />
                 </div>
                 <div class="mb-3 box-input">
                     <input type="password" class="form-control input1" id="pwd" required placeholder="Mật khẩu"
-                        name="lbpswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                        name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                </div>
+                <div class="mb-3 box-input">
+                  <input type="password" class="form-control input1" id="repwd" required placeholder="Nhập lại mật khẩu"
+                      name="repwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
                 </div>
                 <div class="mb-3 box-input">
                     <div class="wrapbox-content-account">
@@ -139,8 +123,6 @@
                     </div>
                 </div>
     </div>
-
-
             <!-- <div class="container-fluid">
       <div class="container">
         new arrival -->
@@ -262,7 +244,12 @@
                   <p>Copyright &COPY 2024 lush. Powered by Lush-team</p>
                 </div>
               </footer>
-            <script src="home.js"></script>
+            <!-- <script src="home.js"></script> -->
+            <script src="../JavaScripts/Register.js"></script>
+            <script src="../JavaScripts/MainDB.js"></script>
+            <script src="../JavaScripts/SalesController.js"></script>
+            <script src="../JavaScripts/EnterProductsController.js"></script>
+            <script src="../JavaScripts/UserController.js"></script>
+            <script src="../JavaScripts/UserService.js"></script>
 </body>
-
 </html>
