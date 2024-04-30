@@ -22,7 +22,6 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="../StyleSheets/home.css" />
         <script src="../JavaScripts/MainDB.js"></script>
-        <script src="../JavaScripts/Home.js"></script>
         <script src="../JavaScripts/trangtimkiem.js"> </script>
 
     </head>
@@ -41,17 +40,16 @@
                         Tặng 1 Tote bag cho đơn hàng từ 299k. Freeship với hóa
                         đơn từ 1,500,000đ
                     </div>
-                    <div class="col d-flex justify-content-end">
-                        <div class="input-group search-group">
-                            <form action="trangtimkiem.html" name="f1" method="get">
+                    <div class="col d-flex justify-content-end">                 
+                        <form action="trangtimkiem.html" name="f1" method="get">
+                            <div class="input-group search-group">
                                 <input type="text" class="form-control input-search" placeholder="Tìm kiếm..." onkeypress="kt()"/>
                                 <button
                                 class="btn btn-outline-secondary btn-search" onclick="timkiem()">
                                 <i data-feather="search"></i>
-                            </button>
-                            </form>
-                            
-                        </div>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -432,5 +430,7 @@
                 <p>Copyright &COPY 2024 lush. Powered by Lush-team</p>
             </div>
         </footer>
+        <script src="../JavaScripts/Home.js"></script>
+
     </body>
 </html>
