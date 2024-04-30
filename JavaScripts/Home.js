@@ -178,8 +178,11 @@ var bestSellerProducts = [
 // end of best seller
 
 function getUser() {
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
+    var urlParams = new URLSearchParams(window.location.search);
+    
+    var urlWithoutQueryString = window.location.pathname;
+    history.replaceState(null, '', urlWithoutQueryString);
+
     document.getElementById("user-name").innerHTML = getUserDetails(urlParams.get("identify")).userName;
     document.getElementById("cart-count").innerHTML = getCartByUser(urlParams.get("identify")).items.length;
 }

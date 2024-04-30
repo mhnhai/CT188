@@ -6,3 +6,5 @@ import { handleActiveTabs, showContent } from '../JavaScripts/AdminEventHandle.j
 document.addEventListener('DOMContentLoaded', function() {
     handleActiveTabs();
 });
+
+

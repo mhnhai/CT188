@@ -2,6 +2,8 @@ export function handleActiveTabs() {
     const contentId = ['home', 'products', 'orders', 'customers', ''];
     // Lấy tất cả các tab
     let tabs = document.querySelectorAll('.nav-link');
+    var urlWithoutQueryString = window.location.pathname;
+    history.replaceState(null, '', urlWithoutQueryString);
     
     for (var i = 0; i < tabs.length; i++) {
         const item = contentId[i];
