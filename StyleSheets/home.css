@@ -170,10 +170,6 @@ body {
     }
 }
 
-.product-carousel-item {
-    /* width: 25%; */
-}
-
 #carouselExampleAutoplaying_newArrival {
     margin: 0 -12px;
 
@@ -298,3 +294,6 @@ footer p {
   .btn111 .btn2 {
     padding: 17px 34px;
   }
+img{
+    cursor: pointer;
+}

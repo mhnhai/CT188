@@ -67,6 +67,6 @@ function timkiem(){
   const keywords = document.getElementsByClassName("input-search")[0].value.toLowerCase();
   //data sau khi lay tu keywords
   const filteredClothing = products.filter(clothing => clothing.productName.toLowerCase().includes(keywords));
-  // console.log(filteredClothing);
+  console.log(filteredClothing);
 }
 
