@@ -22,11 +22,9 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="../StyleSheets/home.css" />
         <script src="../JavaScripts/MainDB.js"></script>
-        <script src="../JavaScripts/Home.js"></script>
         <script src="../JavaScripts/trangtimkiem.js"> </script>
         <script src="../JavaScripts/Admin.js"></script>
         <script src="../JavaScripts/AdminEventHandle.js"></script>
-        <script src="../JavaScripts/sanpham.js"></script>
         <script src="../JavaScripts/detail.js"></script>
 
     </head>
@@ -80,13 +78,13 @@
                 </div>
                 <div class="col-3">
                     <div class="d-flex justify-content-end me-4">
-                        <a href="#" class="btn-login">
+                        <a href="dangnhap.html" class="btn-login">
                             <i data-feather="users"></i>
-                            <span>Đăng nhập</span>
+                            <span id="user-name">Đăng nhập</span>
                         </a>
                         <div class="cart-container">
-                            <i data-feather="shopping-bag"></i>
-                            <span class="count">0</span>
+                            <a href="giohang.html"><i data-feather="shopping-bag"></i></a>
+                            <span id="cart-count">0</span>
                         </div>
                     </div>
                 </div>
@@ -94,7 +92,6 @@
         </div>
     </div>
     <!-- end of navigation bar -->
-        <!-- navigation bar -->
         <main>
             <div class="container" id="sanpham">
             </div>
@@ -209,4 +206,8 @@
             </div>
         </footer>
     </body>
+    <script src="../JavaScripts/Home.js"></script>
+    <script src="../JavaScripts/sanpham.js"></script>
 </html>
+
+
