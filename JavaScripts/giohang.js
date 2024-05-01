@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 function renderCartItems(userIdentify) {
     const container = document.getElementById("cart-items-container");
     let html = "";
@@ -71,3 +72,17 @@ function redirectToHomePage() {
 }
 loadDataFromLocalStorage();
 renderCartItems(localStorage.getItem("user"));
+=======
+function diachi(){
+    var tinh = document.getElementById("tinh").value;
+    var huyen = document.getElementById("huyen").value;
+    var thixa = document.getElementById("thixa").value;
+    const order = `Tỉnh: ${tinh}, Huyện: ${huyen}, Thị xã: ${thixa}`;
+
+
+}
+
+function dathang(){
+
+}
+>>>>>>> Stashed changes
