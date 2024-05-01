@@ -52,3 +52,21 @@ for (var i = 0; i < pageBtns.length; i++) {
 }
 
 updateButtons();
+
+
+
+//ham tim kiem
+function kt() {
+  var key = event.which || event.keyCode;
+  if (key == 13){
+    timkiem();
+  }
+}
+
+function timkiem(){
+  const keywords = document.getElementsByClassName("input-search")[0].value.toLowerCase();
+  //data sau khi lay tu keywords
+  const filteredClothing = products.filter(clothing => clothing.productName.toLowerCase().includes(keywords));
+  console.log(filteredClothing);
+}
+

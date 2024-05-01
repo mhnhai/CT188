@@ -1,214 +1,38 @@
 feather.replace();
+window.onload = function(){
+    var SPMoi = '';
+    for (var i = 0; i < 4; i++) {
+        if (i % 4 == 0) {
+            SPMoi += '<div class="row m-5">';
+        }
+        SPMoi += '<div class="product col-3">'
+            + '<div class="product-image">'
+            + '<img src="' + products[i].image + '" onclick="chitiet(' + products[i].id + ')"/>' + '</div>'
+            + '<div class="product-name">' + products[i].productName + '</div>'
+            + '<div class="product-price">' +
+            '<span class="discounted">' + products[i].price + 'đ</span>'
+            + '</div></div>';
+        if (i % 4 == 3) {
+            SPMoi += '</div>';
+        }
+    }
+    document.getElementById("new-arrival-container").innerHTML = SPMoi;
+    var SPBanChay ='';
+    for (var i = 4; i < 8; i++) {
+        if (i % 4 == 0) {
+            SPBanChay += '<div class="row m-5">';
+        }
+        SPBanChay += '<div class="product col-3">'
+            + '<div class="product-image">'
+            + '<img src="' + products[i].image + '" onclick="chitiet(' + products[i].id + ')"/>' + '</div>'
+            + '<div class="product-name">' + products[i].productName + '</div>'
+            + '<div class="product-price">' +
+            '<span class="discounted">' + products[i].price + 'đ</span>'
+            + '</div></div>';
+        if (i % 4 == 3) {
+            SPBanChay += '</div>';
+        }
+    }
+    document.getElementById("best-seller-container").innerHTML = SPBanChay;
 
-var newArrivalProducts = [
-    {
-        name: "pant1",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants1.jpg",
-    },
-    {
-        name: "pant2",
-        price: 356000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants2.jpg",
-    },
-    {
-        name: "pant3",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants3.jpg",
-    },
-    {
-        name: "pant4",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants4.jpg",
-    },
-    {
-        name: "pant5",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants5.jpg",
-    },
-    {
-        name: "pant6",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants6.jpg",
-    },
-];
-
-var bestSellerProducts = [
-    {
-        name: "pant1",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants1.jpg",
-    },
-    {
-        name: "pant2",
-        price: 356000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants2.jpg",
-    },
-    {
-        name: "pant3",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants3.jpg",
-    },
-    {
-        name: "pant4",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants4.jpg",
-    },
-    {
-        name: "pant5",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants5.jpg",
-    },
-    {
-        name: "pant6",
-        price: 223000,
-        discount: 0.3,
-        imageUrl: "images/pants/pants6.jpg",
-    },
-];
-
-// product
-// var autoPlayingDuration = 3000;
-
-// new arrival (na)
-// var naShowingCount = 4;
-// var naCount = newArrivalProducts.length;
-// var naProductNeedToBeShowed = naCount - naShowingCount;
-// var naInstance = document.querySelector("#new-arrival-container");
-// var naWidth = naInstance.scrollWidth;
-
-// var naItemInstance = document.querySelector("#new-arrival-container .product");
-// var naItemWidth = naItemInstance.clientWidth;
-
-// var naMaxScroll = (naCount - naShowingCount) * naItemWidth;
-// var naCurrentScroll = 0;
-
-// var naScrollIntervalFunction = function () {
-//     if (naCurrentScroll + naItemWidth <= naMaxScroll) {
-//         naCurrentScroll += naItemWidth;
-//     } else {
-//         naCurrentScroll = 0;
-//     }
-
-//     naInstance.scroll({
-//         left: naCurrentScroll,
-//         behavior: "smooth",
-//     });
-// };
-
-// var naScrollIntervalId = window.setInterval(
-//     naScrollIntervalFunction,
-//     autoPlayingDuration
-// );
-
-// naInstance.addEventListener("mouseover", function () {
-//     window.clearInterval(naScrollIntervalId);
-// });
-
-// naInstance.addEventListener("mouseout", function () {
-//     naScrollIntervalId = window.setInterval(
-//         naScrollIntervalFunction,
-//         autoPlayingDuration
-//     );
-// });
-
-// naInstance.addEventListener("scrollend", function () {
-//     naCurrentScroll =
-//         Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
-// });
-// end of new arrival
-
-// best seller (bs)
-// var bsShowingCount = 4;
-// var bsCount = bestSellerProducts.length;
-// var bsProductNeedToBeShowed = bsCount - bsShowingCount;
-// var bsInstance = document.querySelector("#best-seller-container");
-// var bsWidth = bsInstance.scrollWidth;
-
-// var bsItemInstance = document.querySelector("#best-seller-container .product");
-// var bsItemWidth = bsItemInstance.clientWidth;
-
-// var bsMaxScroll = (bsCount - bsShowingCount) * bsItemWidth;
-// var bsCurrentScroll = 0;
-
-// var bsScrollIntervalFunction = function () {
-//     if (bsCurrentScroll + bsItemWidth <= bsMaxScroll) {
-//         bsCurrentScroll += bsItemWidth;
-//     } else {
-//         bsCurrentScroll = 0;
-//     }
-
-//     bsInstance.scroll({
-//         left: bsCurrentScroll,
-//         behavior: "smooth",
-//     });
-// };
-
-// var bsScrollIntervalId = window.setInterval(
-//     bsScrollIntervalFunction,
-//     autoPlayingDuration
-// );
-
-// bsInstance.addEventListener("mouseover", function () {
-//     window.clearInterval(bsScrollIntervalId);
-// });
-
-// bsInstance.addEventListener("mouseout", function () {
-//     bsScrollIntervalId = window.setInterval(
-//         bsScrollIntervalFunction,
-//         autoPlayingDuration
-//     );
-// });
-
-// bsInstance.addEventListener("scrollend", function () {
-//     bsCurrentScroll =
-//         Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
-// });
-// end of best seller
-
-function getUser() {
-    var urlParams = new URLSearchParams(window.location.search);
-    
-    var urlWithoutQueryString = window.location.pathname;
-    history.replaceState(null, '', urlWithoutQueryString);
-    // if(currentUser == null) return;
-    document.getElementById("user-name").innerHTML = getUserDetails(urlParams.get("identify")).userName;
-    document.getElementById("cart-count").innerHTML = getCartByUser(urlParams.get("identify")).length;
 }
-getUser();
-
-function renderProducts(products, element) {
-    const container = document.getElementById(element); // Assuming you have a container element with id "product-container"
-    let html = "";
-
-    products.forEach(product => {
-        html += `
-            <div class="product col-3">
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.productName}" />
-                </div>
-                <div class="product-name">
-                    ${product.productName}
-                </div>
-                <div class="product-price">
-                    <span class="discounted">${product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</span>
-                </div>
-            </div>
-        `;
-    });
-    container.innerHTML = html;
-}
-
-renderProducts(products, "new-arrival-container");
-renderProducts(products, "best-seller-container");

@@ -1,4 +1,3 @@
-
 import { handleActiveTabs, showContent } from '../JavaScripts/AdminEventHandle.js';
 
 // importDataToLocalStorage();
