@@ -1,4 +1,3 @@
-
 function login() {
     importDataToLocalStorage();
     var frm = document.forms["myForm"];

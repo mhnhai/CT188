@@ -27,73 +27,74 @@
     <link rel="stylesheet" href="../StyleSheets/home.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="../JavaScripts/giohang.js"></script>
+    
   
   </head>
   <body>
     <!-- main -->
         <!-- header -->
         <div class="container-fluid header-container-fluid">
-            <div class="container">
-                <div class="row align-items-center header">
-                    <div class="col header-contact">
-                        <span>lushfashionstyle@gmail.com</span>
-                        <span class="vertical-separation-symbol"></span>
-                        <span>Hotline: 012 123 1234</span>
-                    </div>
-                    <div class="col text-center">
-                        Tặng 1 Tote bag cho đơn hàng từ 299k. Freeship với hóa
-                        đơn từ 1,500,000đ
-                    </div>
-                    <div class="col d-flex justify-content-end">
-                        <div class="input-group search-group">
-                            <input
-                                type="text"
-                                class="form-control input-search"
-                                placeholder="Tìm kiếm..."
-                            />
-                            <button
-                                class="btn btn-outline-secondary btn-search"
-                            >
-                                <i data-feather="search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of header -->
-    <!-- navigation bar -->
-    <div class="container-fluid sticky-top navigation-bar-sticky">
-        <div class="container py-3">
-            <div class="row align-items-center">
-                <div class="col-3">
-                    <span class="logo">LUSH</span>
-                </div>
-                <div class="col-6">
-                    <div class="navigation-menu">
-                        <span>Tất cả sản phẩm</span>
-                        <span>Áo thun</span>
-                        <span>Quần</span>
-                        <span>Váy</span>
-                        <span>Nón</span>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="d-flex justify-content-end me-4">
-                        <!-- <a href="#" class="btn-login">
-                            <i data-feather="users"></i>
-                            <span>Đăng nhập</span>
-                        </a>
-                        <div class="cart-container">
-                            <i data-feather="shopping-bag"></i>
-                            <span class="count">0</span>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of navigation bar -->
+          <div class="container">
+              <div class="row align-items-center header">
+                  <div class="col header-contact">
+                      <span>lushfashionstyle@gmail.com</span>
+                      <span class="vertical-separation-symbol"></span>
+                      <span>Hotline: 012 123 1234</span>
+                  </div>
+                  <div class="col text-center">
+                      Tặng 1 Tote bag cho đơn hàng từ 299k. Freeship với hóa
+                      đơn từ 1,500,000đ
+                  </div>
+                  <div class="col d-flex justify-content-end">                 
+                      <form action="trangtimkiem.html" name="f1" method="get">
+                          <div class="input-group search-group">
+                              <input type="text" class="form-control input-search" placeholder="Tìm kiếm..." onkeypress="kt()"/>
+                              <button
+                              class="btn btn-outline-secondary btn-search" onclick="timkiem()">
+                              <i data-feather="search"></i>
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+      <!-- end of header -->
+      <!-- navigation bar -->
+      <div class="container-fluid sticky-top navigation-bar-sticky">
+          <div class="container py-3">
+              <div class="row align-items-center">
+                  <div class="col-3">
+                      <div class="d-flex">
+                          <a href="home.html" class="btn-login"><span class="logo">LUSH</span></a> 
+                      </div>                                          
+                  </div>
+                  <div class="col-6">
+                      <div class="navigation-menu">
+                          <span>Tất cả sản phẩm</span>
+                          <span>Áo thun</span>
+                          <span>Quần</span>   
+                          <span>Váy</span>
+                          <span>Nón</span>
+                      </div>
+                  </div>
+                  <div class="col-3">
+                      <div class="d-flex justify-content-end me-4">
+                          <a href="dangnhap.html" class="btn-login">
+                              <i data-feather="users"></i>
+                              <span id="user-name">Đăng nhập</span>
+                          </a>
+                          <div class="cart-container">
+                              <a href="giohang.html"><i data-feather="shopping-bag"></i></a>
+                              <span id="cart-count">0</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- end of navigation bar -->
 
 <div class="container-fluid mt-3 ">
     <div class="container-fluid text-center">
@@ -121,58 +122,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div style="display: inline;">
-                                    <div class="mb-3 mt-3">
-                                        <div class="row">
-                                          <div class=" col-md-4 bg-white text-white">
-                                            <div class="selectdiachi">
-                                              <select name="Chọn tỉnh / thành" id="tinhthanh">
-                                                <option value="">Chọn tỉnh / thành</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                          <div class=" col-md-4 bg-white text-white">
-                                            <div class="selectdiachi">
-                                              <select name="Chọn tỉnh / thành" id="tinhthanh">
-                                                <option value="">Chọn quận / huyện</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                          <div class=" col-md-4 bg-white text-white">
-                                            <div class="selectdiachi">
-                                              <select name="Chọn tỉnh / thành" id="tinhthanh">
-                                                <option value="">Chọn phường / xã</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                          </div>
-                                    </div>
-                                    <!-- 3 dropdown -->
-                                </div>
-                                <div class="divlast">
-                                  <h5>Phương thức giao hàng</h5>
-                                  <div class="mb-3 mt-3 ptgh" >
-                                    <label for="my-input">
-                                      <input type="radio" checked id="my-input" name="my-input">
-                                      <span >
-                                        Giao hàng tận nơi
-                                        35,000₫
-                                        </span>
-                                    </label>
-                                  </div>
-                                  <h5>Phương thức thanh toán</h5>
-                                  <div class="mb-3 mt-3 ptgh" >
-                                    <label for="my-input">
-                                      <input type="radio" checked id="" name="">
-                                      <span >
-                                      Thanh toán khi giao hàng (COD)
-                                        </span>
-                                    </label>
-                                    <hr>
-                                    <p style="text-align: center;">Khi Shipper đến nhận hàng , vui lòng trả tiền trực tiếp cho Shipper !</p>
-                                  </div>
-                                </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">                          
                                 <div style="display: inline;" class="checkout-note clearfix textarea-container">
                                     <textarea id="myTextarea" style="font-weight: bold; background-color: lightgray;" id="note" name="note" rows="10" cols="100" placeholder="Ghi chú"></textarea>
                                 </div>
@@ -274,7 +224,7 @@
               </span>
               <span class="mail">
                 <i data-feather="mail"></i>
-                <p>abc@gamil.com</p>
+                <p>abc@gmail.com</p>
               </span>
             </div>
           </div>
@@ -286,3 +236,5 @@
     </footer>
   </body>
 </html>
+<script src="../JavaScripts/Home.js"></script>
+
