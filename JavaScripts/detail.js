@@ -10,6 +10,7 @@ function showChiTiet(i) {
         + 'class="img-fluid rounded-start"/></div>'
         + '<div class="rightside col-md-7"><div class="card-body">'
         + '<h1 class="product-name card-title">'
+        + '<input id="productID" style="display: none" value="' + products[i].id + '" ></h1>'
         + '<b>' + products[i].productName + '</b></h1>'
         + '<p class="produc-prices card-text">' + products[i].price + 'đ</p>'
         + '<div class="size"><b>Kích thước: </b><div class="size-option d-flex gap-5">'
@@ -23,8 +24,8 @@ function showChiTiet(i) {
         + '<label class="form-check-label for="exampleRadios2">XL</label></div>'
         + '</div></div></div>'
         + '<div class="quantity m-3"><b>Số lượng: </b>'
-        + '<div class="buy-amount"><button class="minus-btn" onclick="decreaseQuantity()"><i data-feather="minus"></i></button><input type="text" name="amount" id="amount" value="1"><button class="plus-btn" onclick="increaseQuantity()">  <i data-feather="plus"></i></button></div></div>'
-        +'<button class="btnhv" type="button" id="add" name="add" onclick="add('+products[i]+')"><span>Thêm vào giỏ hàng</span></button>'
+        + '<div id="buy-amount"><button class="minus-btn" onclick="decreaseQuantity()"><i data-feather="minus"></i></button><input type="text" name="amount" id="amount" value="1"><button class="plus-btn" onclick="increaseQuantity()">  <i data-feather="plus"></i></button></div></div>'
+        +'<button class="btnhv" type="button" id="add" name="add" onclick="addItemToCart()"><span>Thêm vào giỏ hàng</span></button>'
     document.getElementById("detail").innerHTML = productdetail;
 }
 //load chi tiet
@@ -34,8 +35,6 @@ function showChiTiet(i) {
             vars[key] = parseInt(value);
         });
     showChiTiet(vars.id - 1);
-
-
 
 feather.replace();
 let quantity = 1;
@@ -59,3 +58,44 @@ function updateQuantity() {
 function add(pd){   
     
 }
+
+function addItemToCart() {
+    var userIdentify = localStorage.getItem("user");
+    var productID = document.getElementById("productID").value;
+    console.log(products);
+    const user = window.accounts.find(account => account.userIdentify == userIdentify);
+    const product = window.products.find(product => product.id == productID);
+    
+    if (!user) {
+      console.error('User not found or not authenticated.');
+      return;
+    }
+  
+    if (!product) {
+      console.error('Product not found.');
+      return;
+    }
+  
+    let existingCartItem = window.addToCarts.find(item => item.userIdentify == userIdentify && item.productID == productID);
+    
+    if (existingCartItem) {
+      existingCartItem.amount += quantity;
+    } else {
+      window.addToCarts.push({
+        userIdentify: userIdentify,
+        productID: parseInt(productID),
+        amount: quantity
+      });
+    }
+  
+    localStorage.setItem('addToCarts', JSON.stringify(window.addToCarts));
+    console.log(addToCarts)
+    console.log('Item added to cart successfully.');
+    alert("Thêm vào giỏ hàng thành công");
+}
+
+window.onload = function() {
+    document.getElementById("cart-count").innerHTML = getCartByUser(localStorage.getItem("user")).length;
+    document.getElementById("user-name").innerHTML = getUserDetails(localStorage.getItem("user")).userName;
+}
+
