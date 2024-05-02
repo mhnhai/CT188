@@ -34,5 +34,6 @@ window.onload = function(){
         }
     }
     document.getElementById("best-seller-container").innerHTML = SPBanChay;
-
+    document.getElementById("cart-count").innerHTML = getCartByUser(localStorage.getItem("user")).length;
+    document.getElementById("user-name").innerHTML = getUserDetails(localStorage.getItem("user")).userName;
 }
