@@ -91,6 +91,7 @@ function addItemToCart() {
     localStorage.setItem('addToCarts', JSON.stringify(window.addToCarts));
     console.log(addToCarts)
     console.log('Item added to cart successfully.');
+    alert("Thêm vào giỏ hàng thành công");
 }
 
 window.onload = function() {
