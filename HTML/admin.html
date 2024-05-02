@@ -171,8 +171,10 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Tên sản phẩm</th>
-                                <th>Loại sản phẩm</th>                                    
+                                <th>Loại sản phẩm</th>   
+                                <th>Giá</th>                                  
                                 <th>Số lượng</th>
+                                <th>Hình ảnh</th>
                             </tr>
                         </thead>
                         <tbody id="product-tbody">
@@ -201,23 +203,19 @@
                                             <div class="mb-3 mt-3">
                                                 <label for="category" class="form-label">Loại sản phẩm:</label>
                                                 <select name="category" class="form-select">
-                                                    <option value="1">Áo thun</option>
-                                                    <option value="2">Áo sơ mi</option>
-                                                    <option value="3">Quần dài</option>
-                                                    <option value="4">Quần ngắn</option>
-                                                    <option value="5">Hoodie</option>
-                                                    <option value="6">Jacket</option>
-                                                    <option value="7">Nón</option>
+                                                    <option value="Tee">Áo thun</option>
+                                                    <option value="Shirt">Áo sơ mi</option>
+                                                    <option value="Polo">Áo Polo</option>
+                                                    <option value="Long-pant">Quần dài</option>
+                                                    <option value="Short">Quần ngắn</option>
+                                                    <option value="Hoodie">Hoodie</option>
+                                                    <option value="Jacket">Jacket</option>
+                                                    <option value="Hat">Nón</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3 mt-3">
-                                                <label for="size" class="form-label">Size:</label>
-                                                <select name="size" class="form-select">
-                                                    <option value="1">S</option>
-                                                    <option value="2">M</option>
-                                                    <option value="3">L</option>
-                                                    <option value="4">XL</option>                                                   
-                                                </select>
+                                                <label for="price" class="form-label">Giá:</label>
+                                                <input type="text" class="form-control" id="price" placeholder="Nhập giá sản phẩm" name="price">
                                             </div>
                                             <div class="mb-3 mt-3">
                                                 <label for="quantity" class="form-label">Số lượng:</label>
@@ -227,7 +225,7 @@
                                                 <label for="image" class="form-label">Hình ảnh:</label>
                                                 <input type="file" name="image" id="image">
                                             </div>
-                                            <button type="submit" class="btn btn-outline-dark">Thêm</button>
+                                            <button type="submit" class="btn btn-outline-dark" onclick="">Thêm</button>
                                         </form>
                                     </div>
                                 </div>
