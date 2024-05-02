@@ -28,20 +28,7 @@ function showCartItems(userIdentify) {
     container.innerHTML = html;
 }
 
-function getCartValue(userIdentify) {
-    let cartValue = 0;
 
-    addToCarts.forEach(item => {
-        if (item.userIdentify === userIdentify) {
-            const product = products.find(prod => prod.id === item.productID);
-            if (product) {
-                cartValue += product.price * item.amount;
-            }
-        }
-    });
-
-    return cartValue;
-}
 
 function purchase() {
     console.log(generateBill(localStorage.getItem("user"), getCartByUser(localStorage.getItem("user"))));

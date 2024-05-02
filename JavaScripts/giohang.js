@@ -23,20 +23,16 @@ function renderCartItems(userIdentify) {
                                 <span>${product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</span>₫
                             </p>
                             <p class="variant">
-                                <span class="variant_title">${product.sizes[0]}</span>
+                                <span class="variant_title">Size: ${product.sizes[0]}</span>
                             </p>
                             <div class="qty quantity-partent qty-click clearfix">
                                 <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="text" class="quantity-input" value="${item.amount}">
-                                    <button class="increase">+</button>
+                                    <div> Số lượng: ${item.amount}</div>                           
                                 </div>
                             </div>
                         </td>
                         <td style="float: right;" class="remove">
-                            <a href="/cart/change?line=1&quantity=0" class="cart hovertrash" title="Xóa sản phẩm này">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </a>
+                            
                             <br><br><br>
                             <p class="price" style="float: right;">
                                 <div>
@@ -69,5 +65,28 @@ function renderCartItems(userIdentify) {
 function redirectToHomePage() {
     window.location.href = "home.html";
 }
-loadDataFromLocalStorage();
-renderCartItems(localStorage.getItem("user"));
+function makePurchase() {
+    console.log(generateBill(localStorage.getItem("user"), getCartByUser(localStorage.getItem("user"))));
+    alert("Mua hàng thành công!");
+    window.location = "home.html";
+}
+function getCartValue(userIdentify) {
+    let cartValue = 0;
+
+    addToCarts.forEach(item => {
+        if (item.userIdentify === userIdentify) {
+            const product = products.find(prod => prod.id === item.productID);
+            if (product) {
+                cartValue += product.price * item.amount;
+            }
+        }
+    });
+
+    return cartValue;
+}
+window.onload = function() {
+    loadDataFromLocalStorage();
+    renderCartItems(localStorage.getItem("user"));
+    document.getElementById("user-name").innerHTML = getUserDetails(localStorage.getItem("user")).userName;
+    document.getElementById("total-payment").innerHTML = getCartValue(localStorage.getItem("user")) + 35000;  
+}

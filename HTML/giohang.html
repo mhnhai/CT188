@@ -80,16 +80,12 @@
                       </div>
                   </div>
                   <div class="col-3">
-                      <div class="d-flex justify-content-end me-4">
-                          <a href="dangnhap.html" class="btn-login">
-                              <i data-feather="users"></i>
-                              <span id="user-name">Đăng nhập</span>
-                          </a>
-                          <div class="cart-container">
-                              <a href="giohang.html"><i data-feather="shopping-bag"></i></a>
-                              <span id="cart-count">0</span>
-                          </div>
-                      </div>
+                    <div class="d-flex justify-content-end me-4">
+                      <a href="dangnhap.html" class="btn-login">
+                          <i data-feather="users"></i>
+                          <span id="user-name">Đăng nhập</span>
+                      </a>
+                  </div>
                   </div>
               </div>
           </div>
@@ -124,18 +120,26 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">                          
                                 <div style="display: inline;" class="checkout-note clearfix textarea-container">
-                                    <textarea id="myTextarea" style="font-weight: bold; background-color: lightgray;" id="note" name="note" rows="10" cols="100" placeholder="Ghi chú"></textarea>
+                                    <textarea id="myTextarea" style="font-weight: bold; background-color: lightgray; visibility:hidden;" id="note" name="note" rows="10" cols="100" placeholder="Ghi chú"></textarea>
                                 </div>
                             </div>
-                            <div style="position: relative;"  class="col-md-6 col-lg-6 ">
-                                
-                                    <p style="font-weight: bolder; font-size: 25px; position: absolute; padding-right: 70px; bottom: 20%; right: 0;" class="order-infor">					
+                            <div style="position: relative; display: flex; align-items: end; flex-direction: column;"  class="col-md-6 col-lg-6 ">
+
+                                    <p style="font-weight: bolder; font-size: 25px;  padding-right: 70px;  margin-top: 60px" class="order-infor">					
                                         Tổng tiền:
                                         <span class="total_price" id="cart-value"><b>0</b></span>₫
                                     </p>
+                                    <p style="font-weight: bolder; font-size: 25px;  padding-right: 70px;  " class="order-infor">					
+                                        Tổng tiền:
+                                        <span class="total_price" id="shipping_price"><b>35000</b></span>₫
+                                    </p>
+                                    <p style="font-weight: bolder; font-size: 25px;  padding-right: 70px;  " class="order-infor">					
+                                      Tổng thanh toán:
+                                      <span class="total-payment" id="total-payment"><b>0</b></span>₫
+                                    </p>
                                     <div style="position: absolute; padding-right: 70px; bottom: 0; right: 0;" class="cart-buttons">
                                         <a href="./home.html" class="btnhv" id="abutton">Tiếp tục mua hàng</a>
-                                        <a href="./trangthanhtoan.html" class="btnhv" id="checkout">Thanh toán</a>
+                                        <div class="btnhv" id="checkout" onclick="makePurchase()">Thanh toán</div>
                                     </div>
                             </div>
 
@@ -236,5 +240,11 @@
     </footer>
   </body>
 </html>
-<script src="../JavaScripts/Home.js"></script>
+
+<script src="../JavaScripts/MainDB.js"></script>
+<script src="../JavaScripts/SalesController.js"></script>
+<script src="../JavaScripts/EnterProductsController.js"></script>
+<script src="../JavaScripts/UserController.js"></script>
+<script src="../JavaScripts/UserService.js"></script>
+<script src="../JavaScripts/giohang.js"></script>
 

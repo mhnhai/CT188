@@ -12,6 +12,5 @@ function login() {
     else if(currentUser.role.id == 2) {
         frm.action = "../HTML/home.html"
     }
-    
 }
 

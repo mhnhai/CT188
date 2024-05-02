@@ -1,31 +1,31 @@
 
-.buy-amount{
+#buy-amount{
     display: flex;
 
 }
-.buy-amount button{
+#buy-amount button{
     width: 35px;
     height: 35px;
     outline: none;
     background-color: none;
     border: 1px solid #ececec;
 }
-.buy-amount input{
+#buy-amount input{
     width: 60px;
     text-align: center;
     border: 1px solid #ececec;
 }
-.buy-amount button:hover{
+#buy-amount button:hover{
     background-color: #ececec;
 }
-.buy-amount button:hover svg{
+#buy-amount button:hover svg{
     color: #4f4f4f;
 }
-.buy-amount button svg{
+#buy-amount button svg{
     color: #909090;
 }
 
-.addcart-btn button>a{
+#addcart-btn button>a{
     text-decoration: none;
 }
 img{
