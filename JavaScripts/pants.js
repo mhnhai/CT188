@@ -10,7 +10,7 @@ window.onload = function () {
                 sanpham += '<div class="row m-5">';
             }
             sanpham +=
-                '<div class="product col-3">' +
+                '<div class="product col-3 thu-nghiem-zoom">' +
                 '<div class="product-image">' +
                 '<img src="' +
                 products[i].image +
