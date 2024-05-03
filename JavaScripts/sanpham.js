@@ -1,9 +1,9 @@
 window.onload = function () {
-    var sanpham = '';
+    var sanpham = "";
     for (var i = 0; i < products.length; i++) {
-        if (i % 4 == 0) {
-            sanpham += '<div class="row m-5">';
-        }
+            if (i % 4 == 0) {
+                sanpham += '<div class="row m-5">';
+            }
         sanpham +=
             '<div class="product col-3">' +
             '<div class="product-image">' +
@@ -20,12 +20,11 @@ window.onload = function () {
             '<span class="discounted">' +
             products[i].price +
             "đ</span>" +
-           
+
             "</div></div>";
         if (i % 4 == 3) {
             sanpham += '</div>';
         }
     }
     document.getElementById("sanpham").innerHTML = sanpham;
-
-}
+};
