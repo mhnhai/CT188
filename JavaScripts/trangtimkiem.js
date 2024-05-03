@@ -1,3 +1,6 @@
+document.getElementById("cart-count").innerHTML = getCartByUser(localStorage.getItem("user")).length;
+document.getElementById("user-name").innerHTML = getUserDetails(localStorage.getItem("user")).userName;
+
 var currentPage = 1;
 var totalPages = 4;
 
