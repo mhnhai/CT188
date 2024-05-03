@@ -49,10 +49,27 @@ function displayClothes() {
     // Lấy dữ liệu từ localStorage và chuyển đổi thành danh sách
     loadDataFromLocalStorage();
     for (var i = 0; i < products.length; i++) {
-        clothesTable += '<tr><td>' + products[i].id + '</td><td>' + products[i].productName + '</td><td>' + products[i].category + '</td><td id="price">'+ products[i].price + '</td><td id="soluong">' + products[i].amount + '</td><td id="img"><img src="' + products[i].image + '"></td></tr>';
+        var pd = window.products[i];
+        clothesTable += `<tr><td>${pd.id}</td><td>${pd.productName}</td><td>${pd.category}</td><td id="price">${pd.price}</td><td id="soluong"> ${pd.amount}</td><td id="img"><img src="${pd.image}"></td>`;
+        clothesTable += `<td><button type="button" id="${pd.id}" class="btn btn-dark editBtn" data-bs-toggle="modal" data-bs-target="#editProductModal">Sửa</button></td></tr>`;
     }
-    clothesTable += '</tbody>'; 
+    clothesTable += `</tbody>`; 
     document.getElementById('product-tbody').innerHTML = clothesTable;
+    var btns = document.getElementsByClassName("editBtn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(event) {
+            // Lấy nút mà người dùng đã click
+            var idBtn = parseInt(event.target.id-1);
+            var a = document.getElementById("editForm");
+            a.name.value = products[idBtn].productName;
+            a.category.value = products[idBtn].category;
+            a.price.value = products[idBtn].price;
+            a.quantity.value = products[idBtn].amount;
+            var b = document.getElementById("imgsrc");
+            b.src = products[idBtn].image;
+            a.id.value = idBtn;
+        });
+    }
 }
 
 function displayBills() {
