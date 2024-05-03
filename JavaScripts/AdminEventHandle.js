@@ -49,7 +49,7 @@ function displayClothes() {
     // Lấy dữ liệu từ localStorage và chuyển đổi thành danh sách
     loadDataFromLocalStorage();
     for (var i = 0; i < products.length; i++) {
-        clothesTable += '<tr><td>' + products[i].id + '</td><td>' + products[i].productName + '</td><td>' + products[i].category + '</td><td id="soluong">' + products[i].amount + '</td></tr>';
+        clothesTable += '<tr><td>' + products[i].id + '</td><td>' + products[i].productName + '</td><td>' + products[i].category + '</td><td id="price">'+ products[i].price + '</td><td id="soluong">' + products[i].amount + '</td><td id="img"><img src="' + products[i].image + '"></td></tr>';
     }
     clothesTable += '</tbody>'; 
     document.getElementById('product-tbody').innerHTML = clothesTable;
