@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="../StyleSheets/home.css" />
     <link rel="stylesheet" href="../StyleSheets/chitiet.css" />
     <link rel="stylesheet" href="../StyleSheets/giohang.css" />
-    <script src="../JavaScripts/MainDB.js"></script>
-    <script src="../JavaScripts/home.js"></script>
-    <script src="../JavaScripts/trangtimkiem.js"></script>
 </head>
 
 <body>
@@ -37,15 +34,13 @@
                     đơn từ 1,500,000đ
                 </div>
                 <div class="col d-flex justify-content-end">
-                    <form action="trangtimkiem.html" name="f1" method="get">
-                        <div class="input-group search-group">
-                            <input type="text" class="form-control input-search" placeholder="Tìm kiếm..."
-                                onkeypress="kt()" />
-                            <button class="btn btn-outline-secondary btn-search" onclick="timkiem()">
-                                <i data-feather="search"></i>
-                            </button>
-                        </div>
-                    </form>
+                    <div class="input-group search-group">
+                        <input id="search-input" type="text" class="form-control input-search"
+                            placeholder="Tìm kiếm..." />
+                        <button type="button" id="search-button" class="btn btn-outline-secondary btn-search">
+                            <i data-feather="search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,6 +51,7 @@
         <div class="container py-3">
             <div class="row align-items-center">
                 <div class="col-3">
+
                     <div class="d-flex">
                         <a href="home.html" class="btn-login"><span class="logo">
                                 <div class="container-lush">
@@ -66,6 +62,7 @@
                                 </div>
                             </span></a>
                     </div>
+
                 </div>
                 <div class="col-6">
                     <div class="navigation-menu">
@@ -83,10 +80,10 @@
                             <i data-feather="users"></i>
                             <span id="user-name">Đăng nhập</span>
                         </a>
-                        <div class="cart-container">
-                            <a href="giohang.html"><i data-feather="shopping-bag"></i></a>
+                        <a href="giohang.html" class="cart-container">
+                            <i data-feather="shopping-bag"></i>
                             <span id="cart-count">0</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
