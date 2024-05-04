@@ -1,5 +1,6 @@
 function login() {
-    // importDataToLocalStorage();
+    importDataToLocalStorage();
+    
     var frm = document.forms["myForm"];
     var userName = frm["identify"].value;
     var pwd = frm["pwd"].value;

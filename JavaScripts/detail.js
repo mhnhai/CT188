@@ -85,7 +85,7 @@ function addItemToCart() {
         return;
       }
     } 
-    else if(!existingCartItem) {
+    else if(!existingCartItem && product.amount < quantity) {
         if(product.amount < quantity)  {
             alert("Không đủ sản phẩm!");
             return; 
@@ -104,6 +104,7 @@ function addItemToCart() {
     console.log(addToCarts)
     console.log('Item added to cart successfully.');
     alert("Thêm vào giỏ hàng thành công");
+    document.getElementById("cart-count").innerHTML = getCartByUser(localStorage.getItem("user")).length;
 }
 
 window.onload = function() {

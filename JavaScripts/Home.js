@@ -1,5 +1,4 @@
 feather.replace(); // Load các icon
-
 var newArrivalProducts = Array.from(products);
 
 var bestSellerProducts = Array.from(products.reverse());
