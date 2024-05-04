@@ -43,7 +43,7 @@ export function showContent(contentId) {
     }
 }
 
-function displayClothes() {
+window.displayClothes = function() {
     var clothesTable = '<tbody id="product-tbody">';
 
     // Lấy dữ liệu từ localStorage và chuyển đổi thành danh sách
