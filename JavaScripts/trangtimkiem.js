@@ -56,8 +56,9 @@ updateButtons();
 
 
 //ham tim kiem
-function kt() {
-  var key = event.which || event.keyCode;
+function kt(event) {
+  var key = event.key;
+	// console.log(key);
   if (key == 13){
     timkiem();
   }

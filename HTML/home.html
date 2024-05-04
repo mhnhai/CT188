@@ -12,7 +12,7 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<link rel="stylesheet" href="../StyleSheets/home.old.css" />
+	<link rel="stylesheet" href="../StyleSheets/home.css" />
 </head>
 
 <body>
@@ -31,8 +31,8 @@
 				</div>
 				<div class="col d-flex justify-content-end">
 					<div class="input-group search-group">
-						<input type="text" class="form-control input-search" placeholder="Tìm kiếm..." />
-						<button class="btn btn-outline-secondary btn-search">
+						<input id="search-input" type="text" class="form-control input-search" placeholder="Tìm kiếm..." />
+						<button id="search-button" class="btn btn-outline-secondary btn-search">
 							<i data-feather="search"></i>
 						</button>
 					</div>
@@ -59,14 +59,14 @@
 				</div>
 				<div class="col-3">
 					<div class="d-flex justify-content-end me-4">
-						<a href="#" class="btn-login">
+						<a href="dangnhap.html" class="btn-login">
 							<i data-feather="users"></i>
-							<span>Đăng nhập</span>
+							<span id="user-name">Đăng nhập</span>
 						</a>
-						<div class="cart-container">
+						<a href="giohang.html" class="cart-container">
 							<i data-feather="shopping-bag"></i>
-							<span class="count">0</span>
-						</div>
+							<span id="cart-count">0</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -251,12 +251,14 @@
 		</div>
 	</footer>
 
-	<script src="../JavaScripts/home.old.js"></script>
 	<script src="../JavaScripts/MainDB.js"></script>
 	<script src="../JavaScripts/SalesController.js"></script>
 	<script src="../JavaScripts/EnterProductsController.js"></script>
 	<script src="../JavaScripts/UserController.js"></script>
 	<script src="../JavaScripts/UserService.js"></script>
+	<script src="../JavaScripts/detail.js"></script>
+	<script src="../JavaScripts/trangtimkiem.js"></script>
+	<script src="../JavaScripts/home.js"></script>
 </body>
 
 </html>
