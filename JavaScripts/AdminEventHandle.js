@@ -51,7 +51,8 @@ function displayClothes() {
     for (var i = 0; i < products.length; i++) {
         var pd = window.products[i];
         clothesTable += `<tr><td>${pd.id}</td><td>${pd.productName}</td><td>${pd.category}</td><td id="price">${pd.price}</td><td id="soluong"> ${pd.amount}</td><td id="img"><img src="${pd.image}"></td>`;
-        clothesTable += `<td><button type="button" id="${pd.id}" class="btn btn-dark editBtn" data-bs-toggle="modal" data-bs-target="#editProductModal">Sửa</button></td></tr>`;
+        clothesTable += `<td><button type="button" id="${pd.id}" class="btn btn-dark editBtn" data-bs-toggle="modal" data-bs-target="#editProductModal">Sửa</button>
+        <button type="button" class="btn btn-dark" onclick="deleteProduct(${pd.id})">Xóa</button></td></tr>`;
     }
     clothesTable += `</tbody>`; 
     document.getElementById('product-tbody').innerHTML = clothesTable;

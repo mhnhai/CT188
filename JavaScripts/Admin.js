@@ -8,3 +8,4 @@ document.getElementById("revenue-value").innerHTML = calculateRevenue();
 document.addEventListener('DOMContentLoaded', function() {
     handleActiveTabs();
 });
+
