@@ -1,5 +1,8 @@
 function renderCartItems(userIdentify) {
     const container = document.getElementById("cart-items-container");
+    var count = document.querySelector("#lbSoSanPham");
+    count.innerText = addToCarts.length ?? 0
+
     let html = "";
 
     addToCarts.forEach(item => {
