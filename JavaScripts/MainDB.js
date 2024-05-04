@@ -34,7 +34,11 @@ window.products = [
         image: "../images/products/id001.jpg",
         price: 220000,
         category: "Tee",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -43,7 +47,11 @@ window.products = [
         image: "../images/products/id002.jpg",
         price: 220000,
         category: "Tee",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -52,7 +60,11 @@ window.products = [
         image: "../images/products/id003.jpg",
         price: 220000,
         category: "Tee",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -61,7 +73,11 @@ window.products = [
         image: "../images/products/id004.jpg",
         price: 220000,
         category: "Tee",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -70,7 +86,11 @@ window.products = [
         image: "../images/products/id005.jpg",
         price: 220000,
         category: "Polo",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -79,7 +99,11 @@ window.products = [
         image: "../images/products/id006.jpg",
         price: 220000,
         category: "Tee",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -106,7 +130,11 @@ window.products = [
         image: "../images/products/id009.jpg",
         price: 250000,
         category: "Shirt",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -115,7 +143,11 @@ window.products = [
         image: "../images/products/id010.jpg",
         price: 250000,
         category: "Shirt",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -124,7 +156,11 @@ window.products = [
         image: "../images/products/id011.jpg",
         price: 250000,
         category: "Polo",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -133,7 +169,11 @@ window.products = [
         image: "../images/products/id012.jpg",
         price: 380000,
         category: "Jacket",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -142,7 +182,11 @@ window.products = [
         image: "../images/products/id013.jpg",
         price: 250000,
         category: "Shirt",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -151,7 +195,11 @@ window.products = [
         image: "../images/products/id014.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -160,7 +208,11 @@ window.products = [
         image: "../images/products/id015.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -169,7 +221,11 @@ window.products = [
         image: "../images/products/id016.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -178,7 +234,11 @@ window.products = [
         image: "../images/products/id017.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -187,7 +247,11 @@ window.products = [
         image: "../images/products/id018.jpg",
         price: 180000,
         category: "Short",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -196,7 +260,11 @@ window.products = [
         image: "../images/products/id019.jpg",
         price: 380000,
         category: "Jacket",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -205,7 +273,11 @@ window.products = [
         image: "../images/products/id020.jpg",
         price: 280000,
         category: "Long-pant",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -214,7 +286,11 @@ window.products = [
         image: "../images/products/id021.jpg",
         price: 280000,
         category: "Long-pant",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -223,7 +299,11 @@ window.products = [
         image: "../images/products/id022.jpg",
         price: 280000,
         category: "Long-pant",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -232,7 +312,11 @@ window.products = [
         image: "../images/products/id023.jpg",
         price: 280000,
         category: "Long-pant",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -241,7 +325,11 @@ window.products = [
         image: "../images/products/id024.jpg",
         price: 180000,
         category: "Short",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -250,7 +338,11 @@ window.products = [
         image: "../images/products/id025.jpg",
         price: 180000,
         category: "Short",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -259,7 +351,11 @@ window.products = [
         image: "../images/products/id026.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -268,7 +364,11 @@ window.products = [
         image: "../images/products/id027.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -277,7 +377,11 @@ window.products = [
         image: "../images/products/id028.jpg",
         price: 420000,
         category: "Hoodie",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -286,7 +390,11 @@ window.products = [
         image: "../images/products/id029.jpg",
         price: 80000,
         category: "Hat",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
     {
@@ -295,7 +403,11 @@ window.products = [
         image: "../images/products/id030.jpg",
         price: 80000,
         category: "Hat",
+<<<<<<< HEAD
         amount: 30,
+=======
+        amount: 10,
+>>>>>>> 7d326bbbbebc0a3c180820ff0a4fe14b8e3084ce
         sizes: ["S", "M", "L", "XL"],
     },
 ];
