@@ -11,30 +11,30 @@ const productShowingCount = 4; // Số sản phẩm hiển thị tối đa trên
 //#region Các hàm chung
 // Định dạng tiền tệ, VD: input 220000 -> output 220.000
 var formatPrice = function (value) {
-	return new Intl.NumberFormat("vi-VN").format(value);
+  return new Intl.NumberFormat("vi-VN").format(value);
 };
 //#endregion Các hàm chung
 
 //#region HTML template
 // Xây dựng các thẻ html để hiển thị product
 var productHtmlBuilder = function (product) {
-	return /* HTML */ `
-		<div class="product col-3" onclick="chitiet(${product.id})">
-			<div class="product-image">
-				<img src="${product.image}" alt="${product.image}" />
-			</div>
-			<div class="product-name">${product.productName}</div>
-			<div class="product-price">
-				<span class="discounted">${formatPrice(product.price)}đ</span>
-				<div class="size-container">
-					<span>Kích cỡ: </span>
-					${product.sizes.map((element, index) => {
-						return /* HTML */ ` <span>${element}</span> `;
-					})}
-				</div>
-			</div>
-		</div>
-	`;
+  return /* HTML */ `
+    <div class="product col-3" onclick="chitiet(${product.id})">
+      <div class="product-image">
+        <img src="${product.image}" alt="${product.image}" />
+      </div>
+      <div class="product-name">${product.productName}</div>
+      <div class="product-price">
+        <span class="discounted">${formatPrice(product.price)}đ</span>
+        <div class="size-container">
+          <span>Kích cỡ: </span>
+          ${product.sizes.map((element, index) => {
+            return /* HTML */ ` <span>${element}</span> `;
+          })}
+        </div>
+      </div>
+    </div>
+  `;
 };
 //#endregion HTML template
 
@@ -46,7 +46,7 @@ var naInstance = document.querySelector("#new-arrival-container"); // Container 
 var naProductHtmlElements = "";
 
 for (let product of newArrivalProducts) {
-	naProductHtmlElements += productHtmlBuilder(product);
+  naProductHtmlElements += productHtmlBuilder(product);
 }
 // 1.2 Thêm các product vào thẻ chứa
 naInstance.innerHTML = naProductHtmlElements;
@@ -63,42 +63,42 @@ var naCurrentScroll = 0; // Khởi tạo vị trí scroll ban đầu
 
 // Hàm dùng để scroll của danh sách sản phẩm mới
 var naScrollIntervalFunction = function () {
-	if (naCurrentScroll + naItemWidth <= naMaxScroll) {
-		naCurrentScroll += naItemWidth;
-	} else {
-		naCurrentScroll = 0;
-	}
+  if (naCurrentScroll + naItemWidth <= naMaxScroll) {
+    naCurrentScroll += naItemWidth;
+  } else {
+    naCurrentScroll = 0;
+  }
 
-	naInstance.scroll({
-		left: naCurrentScroll,
-		behavior: "smooth",
-	});
+  naInstance.scroll({
+    left: naCurrentScroll,
+    behavior: "smooth",
+  });
 };
 
 // Set interval: Sau mỗi {autoScrollInterval} giây, thì gọi hàm {naScrollIntervalFunction} một lần
 // để thực hiện scroll tự động cho danh sách sản phẩm bán chạy
 var naScrollIntervalId = window.setInterval(
-	naScrollIntervalFunction,
-	autoScrollInterval
+  naScrollIntervalFunction,
+  autoScrollInterval
 );
 
 // Khi con trỏ chuột nằm trên container của danh sách sản phẩm mới thì dừng scroll
 naInstance.addEventListener("mouseover", function () {
-	window.clearInterval(naScrollIntervalId);
+  window.clearInterval(naScrollIntervalId);
 });
 
 // Khi con trỏ chuột ra khỏi container của danh sách sản phẩm mới thì bắt đầu scroll tự động trở lại
 naInstance.addEventListener("mouseout", function () {
-	naScrollIntervalId = window.setInterval(
-		naScrollIntervalFunction,
-		autoScrollInterval
-	);
+  naScrollIntervalId = window.setInterval(
+    naScrollIntervalFunction,
+    autoScrollInterval
+  );
 });
 
 // Khi không thể scroll nữa thì trở lại đầu danh sách
 naInstance.addEventListener("scrollend", function () {
-	naCurrentScroll =
-		Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
+  naCurrentScroll =
+    Math.round(naInstance.scrollLeft / naItemWidth) * naItemWidth;
 });
 
 //#endregion Phần sản phẩm mới
@@ -111,7 +111,7 @@ var bsInstance = document.querySelector("#best-seller-container"); // Container 
 var bsProductHtmlElements = "";
 
 for (let product of bestSellerProducts) {
-	bsProductHtmlElements += productHtmlBuilder(product);
+  bsProductHtmlElements += productHtmlBuilder(product);
 }
 // 1.2 Thêm các product vào thẻ chứa
 bsInstance.innerHTML = bsProductHtmlElements;
@@ -128,42 +128,42 @@ var bsCurrentScroll = 0; // Khởi tạo vị trí scroll ban đầu
 
 // Hàm dùng để scroll của danh sách sản phẩm bán chạy
 var bsScrollIntervalFunction = function () {
-	if (bsCurrentScroll + bsItemWidth <= bsMaxScroll) {
-		bsCurrentScroll += bsItemWidth;
-	} else {
-		bsCurrentScroll = 0;
-	}
+  if (bsCurrentScroll + bsItemWidth <= bsMaxScroll) {
+    bsCurrentScroll += bsItemWidth;
+  } else {
+    bsCurrentScroll = 0;
+  }
 
-	bsInstance.scroll({
-		left: bsCurrentScroll,
-		behavior: "smooth",
-	});
+  bsInstance.scroll({
+    left: bsCurrentScroll,
+    behavior: "smooth",
+  });
 };
 
 // Set interval: Sau mỗi {autoScrollInterval} giây, thì gọi hàm {naScrollIntervalFunction} một lần
 // để thực hiện scroll tự động cho danh sách sản phẩm bán chạy
 var bsScrollIntervalId = window.setInterval(
-	bsScrollIntervalFunction,
-	autoScrollInterval
+  bsScrollIntervalFunction,
+  autoScrollInterval
 );
 
 // Khi con trỏ chuột nằm trên container của danh sách sản phẩm bán chạy thì dừng scroll
 bsInstance.addEventListener("mouseover", function () {
-	window.clearInterval(bsScrollIntervalId);
+  window.clearInterval(bsScrollIntervalId);
 });
 
 // Khi con trỏ chuột ra khỏi container của danh sách sản phẩm mới thì bắt đầu scroll tự động trở lại
 bsInstance.addEventListener("mouseout", function () {
-	bsScrollIntervalId = window.setInterval(
-		bsScrollIntervalFunction,
-		autoScrollInterval
-	);
+  bsScrollIntervalId = window.setInterval(
+    bsScrollIntervalFunction,
+    autoScrollInterval
+  );
 });
 
 // Khi không thể scroll nữa thì trở lại đầu danh sách
 bsInstance.addEventListener("scrollend", function () {
-	bsCurrentScroll =
-		Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
+  bsCurrentScroll =
+    Math.round(bsInstance.scrollLeft / bsItemWidth) * bsItemWidth;
 });
 //#endregion Phần sản phẩm bán chạy
 
@@ -171,7 +171,7 @@ bsInstance.addEventListener("scrollend", function () {
 var username = document.querySelector("#user-name");
 
 username.innerText =
-	getUserDetails(localStorage.getItem("user"))?.userName ?? "Đăng nhập";
+  getUserDetails(localStorage.getItem("user"))?.userName ?? "Đăng nhập";
 //#endregion Phần user
 
 //#region Phần giỏ hàng
@@ -184,17 +184,25 @@ cart.innerText = getCartByUser(localStorage.getItem("user")).length;
 // 1. Xử lý search input: nhấn enter trong khi nhập thì thực hiện tìm kiếm
 var searchInput = document.querySelector("#search-input");
 searchInput.addEventListener("keypress", function (event) {
-	if (event.key === "Enter" &&
-			(searchInput.value !== null && searchInput.value !== undefined && searchInput.value.length !== 0)) {
-				window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`
-	}
+  if (
+    event.key === "Enter" &&
+    searchInput.value !== null &&
+    searchInput.value !== undefined &&
+    searchInput.value.length !== 0
+  ) {
+    window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
+  }
 });
 
 // 2. Xử lý nút search: nhấn nút để thực hiện tìm kiếm
 var searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", function (event) {
-	if (searchInput.value !== null && searchInput.value !== undefined && searchInput.value.length !== 0) {
-				window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`
-	}
+  if (
+    searchInput.value !== null &&
+    searchInput.value !== undefined &&
+    searchInput.value.length !== 0
+  ) {
+    window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
+  }
 });
 //#endregion Phần tìm kiếm

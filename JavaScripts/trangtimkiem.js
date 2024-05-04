@@ -4,7 +4,7 @@ feather.replace();
 var username = document.querySelector("#user-name");
 
 username.innerText =
-	getUserDetails(localStorage.getItem("user"))?.userName ?? "Đăng nhập";
+  getUserDetails(localStorage.getItem("user"))?.userName ?? "Đăng nhập";
 //#endregion Phần user
 
 //#region Phần giỏ hàng
@@ -17,87 +17,90 @@ cart.innerText = getCartByUser(localStorage.getItem("user")).length;
 // 1. Xử lý search input: nhấn enter trong khi nhập thì thực hiện tìm kiếm
 var searchInput = document.querySelector("#search-input");
 searchInput.addEventListener("keypress", function (event) {
-	if (
-		event.key === "Enter" &&
-		searchInput.value !== null &&
-		searchInput.value !== undefined &&
-		searchInput.value.length !== 0
-	) {
-		window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
-	}
+  if (
+    event.key === "Enter" &&
+    searchInput.value !== null &&
+    searchInput.value !== undefined &&
+    searchInput.value.length !== 0
+  ) {
+    window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
+  }
 });
 
 // 2. Xử lý nút search: nhấn nút để thực hiện tìm kiếm
 var searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", function (event) {
-	if (
-		searchInput.value !== null &&
-		searchInput.value !== undefined &&
-		searchInput.value.length !== 0
-	) {
-		window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
-	}
+  if (
+    searchInput.value !== null &&
+    searchInput.value !== undefined &&
+    searchInput.value.length !== 0
+  ) {
+    window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`;
+  }
 });
 //#endregion Phần tìm kiếm
 
 //#region Phần render các sản phẩm tìm được
 // 1. Lọc các sản phẩm trong cửa hàng
 function filterOutProducts() {
-	// Lấy nội dung cần lọc từ URL hiện tại
-	var searchQuery = new URL(window.location).searchParams.get("search") ?? null;
+  // Lấy nội dung cần lọc từ URL hiện tại
+  var searchQuery = new URL(window.location).searchParams.get("search") ?? null;
 
-	if (
-		searchQuery !== null &&
-		searchQuery !== undefined &&
-		searchQuery.length !== 0
-	) {
-		return {
-			products: products.filter((x) => x.productName.toLowerCase().includes(searchQuery.toLocaleLowerCase())),
-			searchQuery: searchQuery
-		}
-	} else return {
-		products: [],
-		searchQuery: ""
-	};
+  if (
+    searchQuery !== null &&
+    searchQuery !== undefined &&
+    searchQuery.length !== 0
+  ) {
+    return {
+      products: products.filter((x) =>
+        x.productName.toLowerCase().includes(searchQuery.toLocaleLowerCase())
+      ),
+      searchQuery: searchQuery,
+    };
+  } else
+    return {
+      products: [],
+      searchQuery: "",
+    };
 }
 
 function renderSearchResult() {
-	var filteredProducts = filterOutProducts();
+  var filteredProducts = filterOutProducts();
 
-	// Hiển thị số sản phẩm tìm được
-	var count = document.querySelector("#lbSoSanPham");
-	count.innerText = `Có ${filteredProducts.products.length} sản phẩm được tìm thấy khớp với "${filteredProducts.searchQuery}"`;
+  // Hiển thị số sản phẩm tìm được
+  var count = document.querySelector("#lbSoSanPham");
+  count.innerText = `Có ${filteredProducts.products.length} sản phẩm được tìm thấy khớp với "${filteredProducts.searchQuery}"`;
 
-	// Hiển thị các sản phẩm
-	var sanphamHtml = "";
-	var j = 0;
-	for (var i = 0; i < filteredProducts.products.length; i++) {
-		if (j % 4 == 0) {
-			sanphamHtml += '<div class="row m-5">';
-		}
-		sanphamHtml +=
-			'<div class="product col-3 thu-nghiem-zoom">' +
-			'<div class="product-image">' +
-			'<img src="' +
-			filteredProducts.products[i].image +
-			'" onclick="chitiet(' +
-			filteredProducts.products[i].id +
-			')"/>' +
-			"</div>" +
-			'<div class="product-name">' +
-			filteredProducts.products[i].productName +
-			"</div>" +
-			'<div class="product-price">' +
-			'<span class="discounted">' +
-			filteredProducts.products[i].price +
-			"đ</span>" +
-			"</div></div>";
-		if (j % 4 == 3) {
-			sanphamHtml += "</div>";
-		}
-		j++;
-	}
-	document.getElementById("sanpham").innerHTML = sanphamHtml;
+  // Hiển thị các sản phẩm
+  var sanphamHtml = "";
+  var j = 0;
+  for (var i = 0; i < filteredProducts.products.length; i++) {
+    if (j % 4 == 0) {
+      sanphamHtml += '<div class="row m-5">';
+    }
+    sanphamHtml +=
+      '<div class="product col-3 thu-nghiem-zoom">' +
+      '<div class="product-image">' +
+      '<img src="' +
+      filteredProducts.products[i].image +
+      '" onclick="chitiet(' +
+      filteredProducts.products[i].id +
+      ')"/>' +
+      "</div>" +
+      '<div class="product-name">' +
+      filteredProducts.products[i].productName +
+      "</div>" +
+      '<div class="product-price">' +
+      '<span class="discounted">' +
+      filteredProducts.products[i].price +
+      "đ</span>" +
+      "</div></div>";
+    if (j % 4 == 3) {
+      sanphamHtml += "</div>";
+    }
+    j++;
+  }
+  document.getElementById("sanpham").innerHTML = sanphamHtml;
 }
 
 // gọi hàm render
