@@ -29,9 +29,7 @@ var productHtmlBuilder = function (product) {
 				<div class="size-container">
 					<span>Kích cỡ: </span>
 					${product.sizes.map((element, index) => {
-						return /* HTML */ `
-							<span>${element}</span>
-						`
+						return /* HTML */ ` <span>${element}</span> `;
 					})}
 				</div>
 			</div>
@@ -172,7 +170,8 @@ bsInstance.addEventListener("scrollend", function () {
 //#region Phần user
 var username = document.querySelector("#user-name");
 
-username.innerText = getUserDetails(localStorage.getItem("user")).userName;
+username.innerText =
+	getUserDetails(localStorage.getItem("user"))?.userName ?? "Đăng nhập";
 //#endregion Phần user
 
 //#region Phần giỏ hàng
@@ -185,11 +184,17 @@ cart.innerText = getCartByUser(localStorage.getItem("user")).length;
 // 1. Xử lý search input: nhấn enter trong khi nhập thì thực hiện tìm kiếm
 var searchInput = document.querySelector("#search-input");
 searchInput.addEventListener("keypress", function (event) {
-	console.log(event.key);
-	// kt(event)
+	if (event.key === "Enter" &&
+			(searchInput.value !== null && searchInput.value !== undefined && searchInput.value.length !== 0)) {
+				window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`
+	}
 });
 
 // 2. Xử lý nút search: nhấn nút để thực hiện tìm kiếm
 var searchButton = document.querySelector("#search-button");
-
+searchButton.addEventListener("click", function (event) {
+	if (searchInput.value !== null && searchInput.value !== undefined && searchInput.value.length !== 0) {
+				window.location.href = `/HTML/trangtimkiem.html?search=${searchInput.value}`
+	}
+});
 //#endregion Phần tìm kiếm
