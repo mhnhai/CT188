@@ -407,3 +407,31 @@ img{
   --bs-pagination-active-bg: #080808;
   margin-left: 200px;
 }
+.accordion-title{
+  color:#080808;
+  font-weight: 500;
+  font-size: 16px;
+}
+.accordion{
+  margin: 20px 20px 20px 0;
+}
+.accordion-body{
+  list-style: none;
+  font-size: 14px;
+  color: #080808;
+
+}
+.accordion-body > ul{
+  list-style: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: white;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width))
+      0 var(--bs-accordion-border-color);
+}

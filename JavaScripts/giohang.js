@@ -35,7 +35,7 @@ function renderCartItems(userIdentify) {
                             </div>
                         </td>
                         <td style="float: right;" class="remove">
-                            
+                        <button type="button" class="btn btn-dark" onclick="removeItemFromCart('${localStorage.getItem("user")}', ${item.productID}); location.reload();"> Xóa </button>
                             <br><br><br>
                             <p class="price" style="float: right;">
                                 <div>

@@ -128,6 +128,18 @@ window.generateBill = function(userIdentify, itemsToPurchase) {
     return newBill;
 };
 
+window.removeItemFromCart = function(userIdentify, productID) {
+    const index = window.addToCarts.findIndex(item => item.userIdentify === userIdentify && item.productID === productID);
+    
+    if (index !== -1) {
+        window.addToCarts.splice(index, 1);
+        localStorage.setItem("addToCarts", JSON.stringify(window.addToCarts));
+        console.log("Item removed from cart successfully.");
+    } else {
+        console.log("Item not found in the cart.");
+    }
+};
+
 window.getAllBillsByUserId = function(userIdentify) {
     loadDataFromLocalStorage();
     return window.bills.filter(bill => bill.userIdentify === userIdentify);
