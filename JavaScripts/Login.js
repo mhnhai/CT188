@@ -1,5 +1,5 @@
 feather.replace();
- function regis() {
+function regis() {
   window.location.href = "./register.html";
 }
 function login() {
