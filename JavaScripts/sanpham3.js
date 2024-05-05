@@ -1,9 +1,9 @@
 window.onload = function () {
     var sanpham = "";
-    for (var i = 0; i < 10; i++) {
-            if (i % 4 == 0) {
-                sanpham += '<div class="row m-5">';
-            }
+    for (var i = 20; i < 30; i++) {
+        if (i % 4 == 0) {
+            sanpham += '<div class="row m-5">';
+        }
         sanpham +=
             '<div class="product col-3 thu-nghiem-zoom">' +
             '<div class="product-image">' +
@@ -22,7 +22,7 @@ window.onload = function () {
             "đ</span>" +
             "</div></div>";
         if (i % 4 == 3) {
-            sanpham += '</div>';
+            sanpham += "</div>";
         }
     }
     document.getElementById("sanpham").innerHTML = sanpham;

@@ -19,21 +19,24 @@ var formatPrice = function (value) {
 // Xây dựng các thẻ html để hiển thị product
 var productHtmlBuilder = function (product) {
   return /* HTML */ `
-    <div class="product col-3" onclick="chitiet(${product.id})">
-      <div class="product-image">
-        <img src="${product.image}" alt="${product.image}" />
+      <div
+          class="product col-3 thu-nghiem-zoom "
+          onclick="chitiet(${product.id})"
+      >
+          <div class="product-image">
+              <img src="${product.image}" alt="${product.image}" />
+          </div>
+          <div class="product-name">${product.productName}</div>
+          <div class="product-price">
+              <span class="discounted">${formatPrice(product.price)}đ</span>
+              <div class="size-container">
+                  <span>Kích cỡ: </span>
+                  ${product.sizes.map((element, index) => {
+                      return /* HTML */ ` <span>${element}</span> `;
+                  })}
+              </div>
+          </div>
       </div>
-      <div class="product-name">${product.productName}</div>
-      <div class="product-price">
-        <span class="discounted">${formatPrice(product.price)}đ</span>
-        <div class="size-container">
-          <span>Kích cỡ: </span>
-          ${product.sizes.map((element, index) => {
-            return /* HTML */ ` <span>${element}</span> `;
-          })}
-        </div>
-      </div>
-    </div>
   `;
 };
 //#endregion HTML template

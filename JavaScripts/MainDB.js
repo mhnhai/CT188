@@ -11,20 +11,20 @@ window.accounts = [
         userName: "Nguyễn Tới",
         roleID: 1,
     },
-    {
-        id: 2,
-        userIdentify: "toib2113322",
-        password: "Toi@1234",
-        userName: "Nguyễn Tới",
-        roleID: 2,
-    },
-    {
-        id: 3,
-        userIdentify: "toic2113322",
-        password: "Toi@1234",
-        userName: "Nguyễn Tới",
-        roleID: 2,
-    },
+    // {
+    //     id: 2,
+    //     userIdentify: "toib2113322",
+    //     password: "Toi@1234",
+    //     userName: "Nguyễn Tới",
+    //     roleID: 2,
+    // },
+    // {
+    //     id: 3,
+    //     userIdentify: "toic2113322",
+    //     password: "Toi@1234",
+    //     userName: "Nguyễn Tới",
+    //     roleID: 2,
+    // },
 ];
 
 window.products = [
@@ -309,13 +309,13 @@ window.addToCarts = [
 ];
 
 window.bills = [
-    { id: 1, userIdentify: "toib2113322" },
-    { id: 2, userIdentify: "toib2113322" },
+    // { id: 1, userIdentify: "toib2113322" },
+    // { id: 2, userIdentify: "toib2113322" },
 ];
 
 window.purchasedProducts = [
-    { billID: 1, productID: 1, amount: 1 },
-    { billID: 2, productID: 2, amount: 1 },
+    // { billID: 1, productID: 1, amount: 1 },
+    // { billID: 2, productID: 2, amount: 1 },
 ];
 
 window.importDataToLocalStorage = function () {
