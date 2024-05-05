@@ -1,3 +1,4 @@
+feather.replace();
 function createUser() {
     var frm = document.forms["myForm"];
     var pwd = frm["pwd"].value;
