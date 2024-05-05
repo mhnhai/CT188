@@ -3,10 +3,10 @@ window.authenticateUser = function(userIdentify, password) {
     const user = window.accounts.find(account => account.userIdentify === userIdentify && account.password === password);
     if (user) {
         const role = window.roles.find(role => role.id === user.roleID);
-        alert("Login complete!")
+        // alert("Login complete!")
         return { user, role };
     } else {
-        alert("Tên đăng nhập hoặc mật khẩu không chính xác!")
+        // alert("Tên đăng nhập hoặc mật khẩu không chính xác!")
         return null;
     }
 };

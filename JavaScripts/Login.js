@@ -1,3 +1,7 @@
+feather.replace();
+function regis() {
+  window.location.href = "./register.html";
+}
 function login() {
   importDataToLocalStorage();
 
